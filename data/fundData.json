@@ -11,7 +11,7 @@
     "total_members": 14,
     "starting_nav": 1000.0,
     "current_nav": 1362.20,
-    "total_units": 92098.19,
+    "total_units": 92098.42,
     "total_portfolio": 125456799,
     "total_contributions": 97134000,
     "total_gain": 28322799,
@@ -37,7 +37,7 @@
     {"month": "2025-09", "month_label": "Sep", "portfolio": 78019445, "nav": 1086.56, "units": 71803.47},
     {"month": "2025-10", "month_label": "Oct", "portfolio": 80146872, "nav": 1055.34, "units": 75944.65},
     {"month": "2025-11", "month_label": "Nov", "portfolio": 98737926, "nav": 1195.72, "units": 82577.33},
-    {"month": "2025-12", "month_label": "Dec", "portfolio": 125456799, "nav": 1362.20, "units": 92098.19}
+    {"month": "2025-12", "month_label": "Dec", "portfolio": 125456799, "nav": 1362.20, "units": 92098.42}
   ],
   "members": [
     {
@@ -46,10 +46,10 @@
       "role": "Top Contributor",
       "pin": "1001",
       "contribution": 19000000,
-      "units": 16251.07,
-      "share_value": 22133709,
-      "gain": 3133709,
-      "return_pct": 16.5,
+      "units": 18062.06,
+      "share_value": 24604134,
+      "gain": 5604134,
+      "return_pct": 29.5,
       "monthly": {"Jan": 500000, "Feb": 2000000, "Mar": 1500000, "Apr": 2000000, "May": 2000000, "Jun": 2000000, "Jul": 2000000, "Aug": 2000000, "Sep": 2000000, "Oct": 0, "Nov": 1000000, "Dec": 2000000}
     },
     {
@@ -58,10 +58,10 @@
       "role": "Most Consistent",
       "pin": "1002",
       "contribution": 12000000,
-      "units": 10054.91,
-      "share_value": 13696818,
-      "gain": 1696818,
-      "return_pct": 14.1,
+      "units": 11366.15,
+      "share_value": 15482967,
+      "gain": 3482967,
+      "return_pct": 29.0,
       "monthly": {"Jan": 1000000, "Feb": 1000000, "Mar": 1000000, "Apr": 1000000, "May": 1000000, "Jun": 1000000, "Jul": 1000000, "Aug": 1000000, "Sep": 1000000, "Oct": 1000000, "Nov": 1000000, "Dec": 1000000}
     },
     {
@@ -70,10 +70,10 @@
       "role": "Member",
       "pin": "1008",
       "contribution": 10500000,
-      "units": 7699.56,
-      "share_value": 10487680,
-      "gain": -12320,
-      "return_pct": -0.1,
+      "units": 9489.70,
+      "share_value": 12926864,
+      "gain": 2426864,
+      "return_pct": 23.1,
       "monthly": {"Jan": 1000000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 0, "Sep": 1000000, "Oct": 0, "Nov": 500000, "Dec": 5000000}
     },
     {
@@ -82,10 +82,10 @@
       "role": "Member",
       "pin": "1003",
       "contribution": 7000000,
-      "units": 5694.95,
-      "share_value": 7757578,
-      "gain": 757578,
-      "return_pct": 10.8,
+      "units": 6851.93,
+      "share_value": 9333694,
+      "gain": 2333694,
+      "return_pct": 33.3,
       "monthly": {"Jan": 500000, "Feb": 500000, "Mar": 500000, "Apr": 1500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 500000, "Oct": 500000, "Nov": 500000, "Dec": 500000}
     },
     {
@@ -94,10 +94,10 @@
       "role": "Member",
       "pin": "1004",
       "contribution": 6500000,
-      "units": 5410.54,
-      "share_value": 7370236,
-      "gain": 870236,
-      "return_pct": 13.4,
+      "units": 6183.07,
+      "share_value": 8422583,
+      "gain": 1922583,
+      "return_pct": 29.6,
       "monthly": {"Jan": 1000000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 500000, "Oct": 500000, "Nov": 500000, "Dec": 500000}
     },
     {
@@ -106,10 +106,10 @@
       "role": "Member",
       "pin": "1005",
       "contribution": 6500000,
-      "units": 5396.15,
-      "share_value": 7350636,
-      "gain": 850636,
-      "return_pct": 13.1,
+      "units": 6181.61,
+      "share_value": 8420587,
+      "gain": 1920587,
+      "return_pct": 29.5,
       "monthly": {"Jan": 500000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 1000000, "Oct": 500000, "Nov": 500000, "Dec": 500000}
     },
     {
@@ -118,10 +118,10 @@
       "role": "Member",
       "pin": "1006",
       "contribution": 6250000,
-      "units": 5227.70,
-      "share_value": 7121208,
-      "gain": 871208,
-      "return_pct": 13.9,
+      "units": 5933.07,
+      "share_value": 8082033,
+      "gain": 1832033,
+      "return_pct": 29.3,
       "monthly": {"Jan": 750000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 500000, "Oct": 500000, "Nov": 500000, "Dec": 500000}
     },
     {
@@ -130,10 +130,10 @@
       "role": "Member",
       "pin": "1010",
       "contribution": 6000000,
-      "units": 4910.47,
-      "share_value": 6688222,
-      "gain": 688222,
-      "return_pct": 11.5,
+      "units": 5683.07,
+      "share_value": 7741483,
+      "gain": 1741483,
+      "return_pct": 29.0,
       "monthly": {"Jan": 500000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 500000, "Oct": 500000, "Nov": 500000, "Dec": 500000}
     },
     {
@@ -142,10 +142,10 @@
       "role": "Member",
       "pin": "1009",
       "contribution": 5884000,
-      "units": 4813.57,
-      "share_value": 6556164,
-      "gain": 672164,
-      "return_pct": 11.4,
+      "units": 5586.06,
+      "share_value": 7609333,
+      "gain": 1725333,
+      "return_pct": 29.3,
       "monthly": {"Jan": 500000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 500000, "Oct": 500000, "Nov": 500000, "Dec": 384000}
     },
     {
@@ -154,10 +154,10 @@
       "role": "Member",
       "pin": "1011",
       "contribution": 5500000,
-      "units": 4506.31,
-      "share_value": 6138596,
-      "gain": 638596,
-      "return_pct": 11.6,
+      "units": 5222.91,
+      "share_value": 7114643,
+      "gain": 1614643,
+      "return_pct": 29.4,
       "monthly": {"Jan": 500000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 500000, "Oct": 0, "Nov": 500000, "Dec": 500000}
     },
     {
@@ -166,10 +166,10 @@
       "role": "Fund Manager",
       "pin": "1007",
       "contribution": 5500000,
-      "units": 4578.73,
-      "share_value": 6237235,
-      "gain": 737235,
-      "return_pct": 13.4,
+      "units": 5255.60,
+      "share_value": 7159173,
+      "gain": 1659173,
+      "return_pct": 30.2,
       "monthly": {"Jan": 1000000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 0, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 0, "Oct": 500000, "Nov": 1000000, "Dec": 0}
     },
     {
@@ -178,10 +178,10 @@
       "role": "Paused",
       "pin": "1012",
       "contribution": 4500000,
-      "units": 4089.05,
-      "share_value": 5569716,
-      "gain": 1069716,
-      "return_pct": 23.8,
+      "units": 4330.97,
+      "share_value": 5899643,
+      "gain": 1399643,
+      "return_pct": 31.1,
       "monthly": {"Jan": 500000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 500000, "Oct": 0, "Nov": 0, "Dec": 0}
     },
     {
@@ -190,9 +190,9 @@
       "role": "Special Project",
       "pin": "1013",
       "contribution": 1000000,
-      "units": 969.01,
-      "share_value": 1320007,
-      "gain": 320007,
+      "units": 969.13,
+      "share_value": 1320153,
+      "gain": 320153,
       "return_pct": 32.0,
       "monthly": {"Jan": 0, "Feb": 0, "Mar": 0, "Apr": 0, "May": 1000000, "Jun": 0, "Jul": 0, "Aug": 0, "Sep": 0, "Oct": 0, "Nov": 0, "Dec": 0}
     },
@@ -202,9 +202,9 @@
       "role": "Occasional",
       "pin": "1014",
       "contribution": 1000000,
-      "units": 983.02,
-      "share_value": 1339079,
-      "gain": 339079,
+      "units": 983.10,
+      "share_value": 1339180,
+      "gain": 339180,
       "return_pct": 33.9,
       "monthly": {"Jan": 0, "Feb": 0, "Mar": 0, "Apr": 0, "May": 500000, "Jun": 0, "Jul": 0, "Aug": 0, "Sep": 500000, "Oct": 0, "Nov": 0, "Dec": 0}
     }
