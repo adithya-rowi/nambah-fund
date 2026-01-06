@@ -10,15 +10,15 @@
     "data_as_of": "2025-12-31",
     "total_members": 14,
     "starting_nav": 1000.0,
-    "current_nav": 1362.20,
-    "total_units": 92098.42,
-    "total_portfolio": 125456799,
+    "current_nav": 1341.14,
+    "total_units": 93507.39,
+    "total_portfolio": 125406728,
     "total_contributions": 97134000,
-    "total_gain": 28322799,
-    "overall_return_pct": 29.2,
-    "cash": 220420,
+    "total_gain": 28272728,
+    "overall_return_pct": 34.1,
+    "cash": 221050,
     "stocks_value": 0,
-    "mutual_funds_value": 125236379,
+    "mutual_funds_value": 125185678,
     "total_realized_pl": 26048259,
     "total_trades": 50,
     "total_fees_paid": 1375000,
@@ -26,18 +26,90 @@
     "trades_note": "Different from personal return. Your return includes mutual fund growth and unrealized gains."
   },
   "nav_history": [
-    {"month": "2025-01", "month_label": "Jan", "portfolio": 8250000, "nav": 1000.00, "units": 8250.00},
-    {"month": "2025-02", "month_label": "Feb", "portfolio": 21269282, "nav": 1308.88, "units": 16250.00},
-    {"month": "2025-03", "month_label": "Mar", "portfolio": 18805040, "nav": 855.54, "units": 21980.14},
-    {"month": "2025-04", "month_label": "Apr", "portfolio": 33534979, "nav": 1031.85, "units": 32499.66},
-    {"month": "2025-05", "month_label": "May", "portfolio": 49195348, "nav": 1193.37, "units": 41221.68},
-    {"month": "2025-06", "month_label": "Jun", "portfolio": 51281496, "nav": 1070.01, "units": 47925.65},
-    {"month": "2025-07", "month_label": "Jul", "portfolio": 55942763, "nav": 1009.76, "units": 55402.22},
-    {"month": "2025-08", "month_label": "Aug", "portfolio": 63014842, "nav": 1002.94, "units": 62829.87},
-    {"month": "2025-09", "month_label": "Sep", "portfolio": 78019445, "nav": 1086.56, "units": 71803.47},
-    {"month": "2025-10", "month_label": "Oct", "portfolio": 80146872, "nav": 1055.34, "units": 75944.65},
-    {"month": "2025-11", "month_label": "Nov", "portfolio": 98737926, "nav": 1195.72, "units": 82577.33},
-    {"month": "2025-12", "month_label": "Dec", "portfolio": 125456799, "nav": 1362.20, "units": 92098.42}
+    {
+      "month": "2025-01",
+      "month_label": "Jan",
+      "portfolio": 8250001,
+      "nav": 1000.0,
+      "units": 8250.0
+    },
+    {
+      "month": "2025-02",
+      "month_label": "Feb",
+      "portfolio": 16769414,
+      "nav": 1031.96,
+      "units": 16250.0
+    },
+    {
+      "month": "2025-03",
+      "month_label": "Mar",
+      "portfolio": 24805201,
+      "nav": 1054.75,
+      "units": 23517.69
+    },
+    {
+      "month": "2025-04",
+      "month_label": "Apr",
+      "portfolio": 31992268,
+      "nav": 998.18,
+      "units": 32050.55
+    },
+    {
+      "month": "2025-05",
+      "month_label": "May",
+      "portfolio": 47652673,
+      "nav": 1160.37,
+      "units": 41066.95
+    },
+    {
+      "month": "2025-06",
+      "month_label": "Jun",
+      "portfolio": 49738779,
+      "nav": 1037.06,
+      "units": 47961.33
+    },
+    {
+      "month": "2025-07",
+      "month_label": "Jul",
+      "portfolio": 53900163,
+      "nav": 968.11,
+      "units": 55675.44
+    },
+    {
+      "month": "2025-08",
+      "month_label": "Aug",
+      "portfolio": 61472267,
+      "nav": 969.25,
+      "units": 63422.46
+    },
+    {
+      "month": "2025-09",
+      "month_label": "Sep",
+      "portfolio": 76777330,
+      "nav": 1055.97,
+      "units": 72707.99
+    },
+    {
+      "month": "2025-10",
+      "month_label": "Oct",
+      "portfolio": 78406974,
+      "nav": 1018.68,
+      "units": 76969.48
+    },
+    {
+      "month": "2025-11",
+      "month_label": "Nov",
+      "portfolio": 98740285,
+      "nav": 1177.71,
+      "units": 83841.14
+    },
+    {
+      "month": "2025-12",
+      "month_label": "Dec",
+      "portfolio": 125406728,
+      "nav": 1341.14,
+      "units": 93507.39
+    }
   ],
   "members": [
     {
@@ -46,11 +118,24 @@
       "role": "Top Contributor",
       "pin": "1001",
       "contribution": 19000000,
-      "units": 18062.06,
-      "share_value": 24604134,
-      "gain": 5604134,
-      "return_pct": 29.5,
-      "monthly": {"Jan": 500000, "Feb": 2000000, "Mar": 1500000, "Apr": 2000000, "May": 2000000, "Jun": 2000000, "Jul": 2000000, "Aug": 2000000, "Sep": 2000000, "Oct": 0, "Nov": 1000000, "Dec": 2000000}
+      "units": 18314.7,
+      "share_value": 24562623,
+      "gain": 5562623,
+      "return_pct": 29.3,
+      "monthly": {
+        "Jan": 500000,
+        "Feb": 2000000,
+        "Mar": 1500000,
+        "Apr": 2000000,
+        "May": 2000000,
+        "Jun": 2000000,
+        "Jul": 2000000,
+        "Aug": 2000000,
+        "Sep": 2000000,
+        "Oct": 0,
+        "Nov": 1000000,
+        "Dec": 2000000
+      }
     },
     {
       "name": "Indah",
@@ -58,11 +143,24 @@
       "role": "Most Consistent",
       "pin": "1002",
       "contribution": 12000000,
-      "units": 11366.15,
-      "share_value": 15482967,
-      "gain": 3482967,
-      "return_pct": 29.0,
-      "monthly": {"Jan": 1000000, "Feb": 1000000, "Mar": 1000000, "Apr": 1000000, "May": 1000000, "Jun": 1000000, "Jul": 1000000, "Aug": 1000000, "Sep": 1000000, "Oct": 1000000, "Nov": 1000000, "Dec": 1000000}
+      "units": 11587.44,
+      "share_value": 15540405,
+      "gain": 3540405,
+      "return_pct": 29.5,
+      "monthly": {
+        "Jan": 1000000,
+        "Feb": 1000000,
+        "Mar": 1000000,
+        "Apr": 1000000,
+        "May": 1000000,
+        "Jun": 1000000,
+        "Jul": 1000000,
+        "Aug": 1000000,
+        "Sep": 1000000,
+        "Oct": 1000000,
+        "Nov": 1000000,
+        "Dec": 1000000
+      }
     },
     {
       "name": "Faristama",
@@ -70,11 +168,24 @@
       "role": "Member",
       "pin": "1008",
       "contribution": 10500000,
-      "units": 9489.70,
-      "share_value": 12926864,
-      "gain": 2426864,
+      "units": 9640.6,
+      "share_value": 12929417,
+      "gain": 2429417,
       "return_pct": 23.1,
-      "monthly": {"Jan": 1000000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 0, "Sep": 1000000, "Oct": 0, "Nov": 500000, "Dec": 5000000}
+      "monthly": {
+        "Jan": 1000000,
+        "Feb": 500000,
+        "Mar": 500000,
+        "Apr": 500000,
+        "May": 500000,
+        "Jun": 500000,
+        "Jul": 500000,
+        "Aug": 0,
+        "Sep": 1000000,
+        "Oct": 0,
+        "Nov": 500000,
+        "Dec": 5000000
+      }
     },
     {
       "name": "Aiken",
@@ -82,11 +193,24 @@
       "role": "Member",
       "pin": "1003",
       "contribution": 7000000,
-      "units": 6851.93,
-      "share_value": 9333694,
-      "gain": 2333694,
-      "return_pct": 33.3,
-      "monthly": {"Jan": 500000, "Feb": 500000, "Mar": 500000, "Apr": 1500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 500000, "Oct": 500000, "Nov": 500000, "Dec": 500000}
+      "units": 6741.81,
+      "share_value": 9041734,
+      "gain": 2041734,
+      "return_pct": 29.2,
+      "monthly": {
+        "Jan": 500000,
+        "Feb": 500000,
+        "Mar": 500000,
+        "Apr": 1500000,
+        "May": 500000,
+        "Jun": 500000,
+        "Jul": 500000,
+        "Aug": 500000,
+        "Sep": 500000,
+        "Oct": 500000,
+        "Nov": 500000,
+        "Dec": 500000
+      }
     },
     {
       "name": "Rachman",
@@ -94,11 +218,24 @@
       "role": "Member",
       "pin": "1004",
       "contribution": 6500000,
-      "units": 6183.07,
-      "share_value": 8422583,
-      "gain": 1922583,
-      "return_pct": 29.6,
-      "monthly": {"Jan": 1000000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 500000, "Oct": 500000, "Nov": 500000, "Dec": 500000}
+      "units": 6293.72,
+      "share_value": 8440774,
+      "gain": 1940774,
+      "return_pct": 29.9,
+      "monthly": {
+        "Jan": 1000000,
+        "Feb": 500000,
+        "Mar": 500000,
+        "Apr": 500000,
+        "May": 500000,
+        "Jun": 500000,
+        "Jul": 500000,
+        "Aug": 500000,
+        "Sep": 500000,
+        "Oct": 500000,
+        "Nov": 500000,
+        "Dec": 500000
+      }
     },
     {
       "name": "Yakub",
@@ -106,11 +243,24 @@
       "role": "Member",
       "pin": "1005",
       "contribution": 6500000,
-      "units": 6181.61,
-      "share_value": 8420587,
-      "gain": 1920587,
-      "return_pct": 29.5,
-      "monthly": {"Jan": 500000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 1000000, "Oct": 500000, "Nov": 500000, "Dec": 500000}
+      "units": 6309.58,
+      "share_value": 8462048,
+      "gain": 1962048,
+      "return_pct": 30.2,
+      "monthly": {
+        "Jan": 500000,
+        "Feb": 500000,
+        "Mar": 500000,
+        "Apr": 500000,
+        "May": 500000,
+        "Jun": 500000,
+        "Jul": 500000,
+        "Aug": 500000,
+        "Sep": 1000000,
+        "Oct": 500000,
+        "Nov": 500000,
+        "Dec": 500000
+      }
     },
     {
       "name": "Rafiri",
@@ -118,11 +268,24 @@
       "role": "Member",
       "pin": "1006",
       "contribution": 6250000,
-      "units": 5933.07,
-      "share_value": 8082033,
-      "gain": 1832033,
-      "return_pct": 29.3,
-      "monthly": {"Jan": 750000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 500000, "Oct": 500000, "Nov": 500000, "Dec": 500000}
+      "units": 6043.72,
+      "share_value": 8105488,
+      "gain": 1855488,
+      "return_pct": 29.7,
+      "monthly": {
+        "Jan": 750000,
+        "Feb": 500000,
+        "Mar": 500000,
+        "Apr": 500000,
+        "May": 500000,
+        "Jun": 500000,
+        "Jul": 500000,
+        "Aug": 500000,
+        "Sep": 500000,
+        "Oct": 500000,
+        "Nov": 500000,
+        "Dec": 500000
+      }
     },
     {
       "name": "Hari",
@@ -130,11 +293,24 @@
       "role": "Member",
       "pin": "1010",
       "contribution": 6000000,
-      "units": 5683.07,
-      "share_value": 7741483,
-      "gain": 1741483,
-      "return_pct": 29.0,
-      "monthly": {"Jan": 500000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 500000, "Oct": 500000, "Nov": 500000, "Dec": 500000}
+      "units": 5793.72,
+      "share_value": 7770203,
+      "gain": 1770203,
+      "return_pct": 29.5,
+      "monthly": {
+        "Jan": 500000,
+        "Feb": 500000,
+        "Mar": 500000,
+        "Apr": 500000,
+        "May": 500000,
+        "Jun": 500000,
+        "Jul": 500000,
+        "Aug": 500000,
+        "Sep": 500000,
+        "Oct": 500000,
+        "Nov": 500000,
+        "Dec": 500000
+      }
     },
     {
       "name": "Jerry",
@@ -142,11 +318,24 @@
       "role": "Member",
       "pin": "1009",
       "contribution": 5884000,
-      "units": 5586.06,
-      "share_value": 7609333,
-      "gain": 1725333,
-      "return_pct": 29.3,
-      "monthly": {"Jan": 500000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 500000, "Oct": 500000, "Nov": 500000, "Dec": 384000}
+      "units": 5695.22,
+      "share_value": 7638105,
+      "gain": 1754105,
+      "return_pct": 29.8,
+      "monthly": {
+        "Jan": 500000,
+        "Feb": 500000,
+        "Mar": 500000,
+        "Apr": 500000,
+        "May": 500000,
+        "Jun": 500000,
+        "Jul": 500000,
+        "Aug": 500000,
+        "Sep": 500000,
+        "Oct": 500000,
+        "Nov": 500000,
+        "Dec": 384000
+      }
     },
     {
       "name": "Ramadhana",
@@ -154,11 +343,24 @@
       "role": "Member",
       "pin": "1011",
       "contribution": 5500000,
-      "units": 5222.91,
-      "share_value": 7114643,
-      "gain": 1614643,
-      "return_pct": 29.4,
-      "monthly": {"Jan": 500000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 500000, "Oct": 0, "Nov": 500000, "Dec": 500000}
+      "units": 5320.22,
+      "share_value": 7135173,
+      "gain": 1635173,
+      "return_pct": 29.7,
+      "monthly": {
+        "Jan": 500000,
+        "Feb": 500000,
+        "Mar": 500000,
+        "Apr": 500000,
+        "May": 500000,
+        "Jun": 500000,
+        "Jul": 500000,
+        "Aug": 500000,
+        "Sep": 500000,
+        "Oct": 0,
+        "Nov": 500000,
+        "Dec": 500000
+      }
     },
     {
       "name": "Adithya",
@@ -166,11 +368,24 @@
       "role": "Fund Manager",
       "pin": "1007",
       "contribution": 5500000,
-      "units": 5255.60,
-      "share_value": 7159173,
-      "gain": 1659173,
-      "return_pct": 30.2,
-      "monthly": {"Jan": 1000000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 0, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 0, "Oct": 500000, "Nov": 1000000, "Dec": 0}
+      "units": 5343.22,
+      "share_value": 7166026,
+      "gain": 1666026,
+      "return_pct": 30.3,
+      "monthly": {
+        "Jan": 1000000,
+        "Feb": 500000,
+        "Mar": 500000,
+        "Apr": 500000,
+        "May": 0,
+        "Jun": 500000,
+        "Jul": 500000,
+        "Aug": 500000,
+        "Sep": 0,
+        "Oct": 500000,
+        "Nov": 1000000,
+        "Dec": 0
+      }
     },
     {
       "name": "Riska",
@@ -178,11 +393,24 @@
       "role": "Paused",
       "pin": "1012",
       "contribution": 4500000,
-      "units": 4330.97,
-      "share_value": 5899643,
-      "gain": 1399643,
-      "return_pct": 31.1,
-      "monthly": {"Jan": 500000, "Feb": 500000, "Mar": 500000, "Apr": 500000, "May": 500000, "Jun": 500000, "Jul": 500000, "Aug": 500000, "Sep": 500000, "Oct": 0, "Nov": 0, "Dec": 0}
+      "units": 4404.83,
+      "share_value": 5907509,
+      "gain": 1407509,
+      "return_pct": 31.3,
+      "monthly": {
+        "Jan": 500000,
+        "Feb": 500000,
+        "Mar": 500000,
+        "Apr": 500000,
+        "May": 500000,
+        "Jun": 500000,
+        "Jul": 500000,
+        "Aug": 500000,
+        "Sep": 500000,
+        "Oct": 0,
+        "Nov": 0,
+        "Dec": 0
+      }
     },
     {
       "name": "Mamet",
@@ -190,11 +418,24 @@
       "role": "Special Project",
       "pin": "1013",
       "contribution": 1000000,
-      "units": 969.13,
-      "share_value": 1320153,
-      "gain": 320153,
-      "return_pct": 32.0,
-      "monthly": {"Jan": 0, "Feb": 0, "Mar": 0, "Apr": 0, "May": 1000000, "Jun": 0, "Jul": 0, "Aug": 0, "Sep": 0, "Oct": 0, "Nov": 0, "Dec": 0}
+      "units": 1001.82,
+      "share_value": 1343586,
+      "gain": 343586,
+      "return_pct": 34.4,
+      "monthly": {
+        "Jan": 0,
+        "Feb": 0,
+        "Mar": 0,
+        "Apr": 0,
+        "May": 1000000,
+        "Jun": 0,
+        "Jul": 0,
+        "Aug": 0,
+        "Sep": 0,
+        "Oct": 0,
+        "Nov": 0,
+        "Dec": 0
+      }
     },
     {
       "name": "Rangga",
@@ -202,35 +443,121 @@
       "role": "Occasional",
       "pin": "1014",
       "contribution": 1000000,
-      "units": 983.10,
-      "share_value": 1339180,
-      "gain": 339180,
-      "return_pct": 33.9,
-      "monthly": {"Jan": 0, "Feb": 0, "Mar": 0, "Apr": 0, "May": 500000, "Jun": 0, "Jul": 0, "Aug": 0, "Sep": 500000, "Oct": 0, "Nov": 0, "Dec": 0}
+      "units": 1016.77,
+      "share_value": 1363638,
+      "gain": 363638,
+      "return_pct": 36.4,
+      "monthly": {
+        "Jan": 0,
+        "Feb": 0,
+        "Mar": 0,
+        "Apr": 0,
+        "May": 500000,
+        "Jun": 0,
+        "Jul": 0,
+        "Aug": 0,
+        "Sep": 500000,
+        "Oct": 0,
+        "Nov": 0,
+        "Dec": 0
+      }
     }
   ],
   "holdings": {
     "stocks": [],
     "mutual_funds": [
-      {"name": "SYAILENDRA DANA KAS", "type": "Money Market", "invested": 125000000, "nav": 125236379}
+      {
+        "name": "SYAILENDRA DANA KAS",
+        "type": "Money Market",
+        "invested": 125000000,
+        "nav": 125185678
+      }
     ]
   },
   "trades": {
     "best": [
-      {"date": "2025-12-16", "stock": "BUMI", "pl": 20733042, "description": "Bought @ 254-354, sold @ 350"},
-      {"date": "2025-11-17", "stock": "BUMI", "pl": 5820108, "description": "Bought 295k @ ~199, sold @ 220"},
-      {"date": "2025-09-23", "stock": "KEEN", "pl": 5734021, "description": "Bought 45k @ 830, sold @ ~960"},
-      {"date": "2025-12-10", "stock": "EMAS", "pl": 1042378, "description": "Bought @ 3770, sold @ 4360"},
-      {"date": "2025-12-01", "stock": "KEEN", "pl": 337732, "description": "Sold @ 1165"}
+      {
+        "date": "2025-12-16",
+        "stock": "BUMI",
+        "pl": 20733042,
+        "description": "Bought @ 254-354, sold @ 350"
+      },
+      {
+        "date": "2025-11-17",
+        "stock": "BUMI",
+        "pl": 5820108,
+        "description": "Bought 295k @ ~199, sold @ 220"
+      },
+      {
+        "date": "2025-09-23",
+        "stock": "KEEN",
+        "pl": 5734021,
+        "description": "Bought 45k @ 830, sold @ ~960"
+      },
+      {
+        "date": "2025-12-10",
+        "stock": "EMAS",
+        "pl": 1042378,
+        "description": "Bought @ 3770, sold @ 4360"
+      },
+      {
+        "date": "2025-12-01",
+        "stock": "KEEN",
+        "pl": 337732,
+        "description": "Sold @ 1165"
+      }
     ],
     "worst": [
-      {"date": "2025-07-09", "stock": "BUMI", "pl": -3917620, "description": "Cut loss @ 115 vs 134 cost"},
-      {"date": "2025-10-15", "stock": "DEWA", "pl": -2937100, "description": "Cut loss @ 322 vs 362 cost"},
-      {"date": "2025-11-06", "stock": "DOID", "pl": -424734, "description": "Sold @ 328 vs 497 cost"},
-      {"date": "2025-05-23", "stock": "RATU", "pl": -409945, "description": "Day trade gone wrong"},
-      {"date": "2025-12-08", "stock": "DEWA", "pl": -343386, "description": "Cut loss"}
+      {
+        "date": "2025-07-09",
+        "stock": "BUMI",
+        "pl": -3917620,
+        "description": "Cut loss @ 115 vs 134 cost"
+      },
+      {
+        "date": "2025-10-15",
+        "stock": "DEWA",
+        "pl": -2937100,
+        "description": "Cut loss @ 322 vs 362 cost"
+      },
+      {
+        "date": "2025-11-06",
+        "stock": "DOID",
+        "pl": -424734,
+        "description": "Sold @ 328 vs 497 cost"
+      },
+      {
+        "date": "2025-05-23",
+        "stock": "RATU",
+        "pl": -409945,
+        "description": "Day trade gone wrong"
+      },
+      {
+        "date": "2025-12-08",
+        "stock": "DEWA",
+        "pl": -343386,
+        "description": "Cut loss"
+      }
     ],
-    "latest": {"date": "2025-12-16", "stock": "BUMI", "pl": 20733042, "type": "gain"}
+    "latest": {
+      "date": "2025-12-16",
+      "stock": "BUMI",
+      "pl": 20733042,
+      "type": "gain"
+    }
   },
-  "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+  "months": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ]
 }
