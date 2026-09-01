@@ -15,11 +15,16 @@ casual; the member-facing UI is in **Bahasa Indonesia**.
 The app currently runs the **2026** fund year (`data/fundData.json`). Key facts:
 - **Fresh start:** the 2025 fund was cashed out (paid to members) in early Jan 2026;
   2026 is a brand-new fund. A member's balance depends only on their 2026 deposits.
-- **Simple proportional accounting** (`fund.model = "simple_proportional"`): each
-  member's `share_value = deposits / total_deposits × current fund value`. A
-  consequence: **every member has the same return %** (`overall_return_pct`).
-- `member.units` is set equal to `member.contribution` (deposits), so the app's
-  ownership/holdings-slice math (`units / total_units`) yields the proportional share.
+- **Money-weighted accounting** (`fund.model = "money_weighted"`): everyone gets
+  their **principal** back, and the **profit** is split by *rupiah-months* — how
+  long each deposit has been working (`weight = Σ monthly_deposit × months-since`).
+  So `share_value = deposits + total_gain × (rupiah_months / Σ rupiah_months)`.
+  Earlier + consistent savers earn a bigger slice of profit; late joiners less.
+  Return % therefore **differs per member**. (Assumes gains accrued evenly over the
+  year — a fair approximation; exact unit/NAV would need a full monthly NAV series.)
+- `member.units` is set equal to `member.share_value`, so the app's
+  ownership/holdings-slice math (`units / total_units`, `total_units = NAV`) yields
+  each member's share of current value.
 - **Holdings are fund-level** — everyone owns them proportionally. A member's slice =
   fund holdings × `deposits / total_deposits`. In 2026 the fund holds **stocks**
   (BULL, BUMI, BBCA, BIPI, HUMI, JGLE) + cash; the money-market fund was redeemed.

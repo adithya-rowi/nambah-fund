@@ -10,11 +10,11 @@
     "year": 2026,
     "start_date": "2026-01-01",
     "data_as_of": "2026-09-01",
-    "model": "simple_proportional",
+    "model": "money_weighted",
     "total_members": 16,
     "starting_nav": 1000,
     "current_nav": 1212.88,
-    "total_units": 135850000,
+    "total_units": 164769685,
     "total_portfolio": 164769685,
     "total_contributions": 135850000,
     "total_gain": 28919685,
@@ -26,7 +26,8 @@
     "total_realized_pl": 1376418,
     "total_trades": 61,
     "notes": "Fresh 2026 fund; 2025 was paid out. Shares = simple proportional (deposits/total x current value). Intra-year NAV approximate from monthly IPOT snapshots; current value exact.",
-    "trades_note": "Notable trades. Jan-Jun fully reconciled to IPOT; some Jul-Aug trade confirmations are missing from source, so the trade ledger is not 100% complete. This does NOT affect member balances (deposits + current fund value are both independently verified)."
+    "trades_note": "Notable trades. Jan-Jun fully reconciled to IPOT; some Jul-Aug trade confirmations are missing from source, so the trade ledger is not 100% complete. This does NOT affect member balances (deposits + current fund value are both independently verified).",
+    "model_note": "Profit dibagi berdasarkan rupiah-bulan (berapa lama tiap setoran bekerja): setoran lebih awal & rutin dapat porsi keuntungan lebih besar. Principal selalu utuh. Asumsi: keuntungan terakumulasi merata sepanjang periode."
   },
   "nav_history": [
     {
@@ -81,11 +82,12 @@
         "Nov": 0,
         "Dec": 0
       },
-      "units": 18900000,
-      "share_value": 22923422,
-      "gain": 4023422,
-      "return_pct": 21.3,
-      "pin_hash": "f05aed302c17249f6a0d7e6c35e666af502b281514f673e0b799100a819cff9d"
+      "units": 23238528,
+      "share_value": 23238528,
+      "gain": 4338528,
+      "return_pct": 23.0,
+      "pin_hash": "f05aed302c17249f6a0d7e6c35e666af502b281514f673e0b799100a819cff9d",
+      "rupiah_months": 112800000
     },
     {
       "name": "Faristama",
@@ -107,11 +109,12 @@
         "Nov": 0,
         "Dec": 0
       },
-      "units": 17200000,
-      "share_value": 20861528,
-      "gain": 3661528,
-      "return_pct": 21.3,
-      "pin_hash": "6571953afea8287dd1c9a7037d1d4937f8b7b483a6c3b4b63c9e518aac9f92a8"
+      "units": 21934690,
+      "share_value": 21934690,
+      "gain": 4734690,
+      "return_pct": 27.5,
+      "pin_hash": "6571953afea8287dd1c9a7037d1d4937f8b7b483a6c3b4b63c9e518aac9f92a8",
+      "rupiah_months": 123100000
     },
     {
       "name": "Paolo",
@@ -133,11 +136,12 @@
         "Nov": 0,
         "Dec": 0
       },
-      "units": 16000000,
-      "share_value": 19406073,
-      "gain": 3406073,
-      "return_pct": 21.3,
-      "pin_hash": "c63bda98bc58e053462ddec7cb63118b794706da55f9849b077cc41a94ac338e"
+      "units": 18692350,
+      "share_value": 18692350,
+      "gain": 2692350,
+      "return_pct": 16.8,
+      "pin_hash": "c63bda98bc58e053462ddec7cb63118b794706da55f9849b077cc41a94ac338e",
+      "rupiah_months": 70000000
     },
     {
       "name": "Yakub",
@@ -159,11 +163,12 @@
         "Nov": 0,
         "Dec": 0
       },
-      "units": 15500000,
-      "share_value": 18799633,
-      "gain": 3299633,
-      "return_pct": 21.3,
-      "pin_hash": "c2e7dc819d5a2d9a6519acb62d67f96b6310b2943ec742f2eafeef1c01613985"
+      "units": 19192366,
+      "share_value": 19192366,
+      "gain": 3692366,
+      "return_pct": 23.8,
+      "pin_hash": "c2e7dc819d5a2d9a6519acb62d67f96b6310b2943ec742f2eafeef1c01613985",
+      "rupiah_months": 96000000
     },
     {
       "name": "Aiken",
@@ -185,11 +190,12 @@
         "Nov": 0,
         "Dec": 0
       },
-      "units": 9000000,
-      "share_value": 10915916,
-      "gain": 1915916,
-      "return_pct": 21.3,
-      "pin_hash": "47e93371968a64b80446503a2343e6e5908311fd0e1e1ceb609ea0443feba1c8"
+      "units": 11134649,
+      "share_value": 11134649,
+      "gain": 2134649,
+      "return_pct": 23.7,
+      "pin_hash": "47e93371968a64b80446503a2343e6e5908311fd0e1e1ceb609ea0443feba1c8",
+      "rupiah_months": 55500000
     },
     {
       "name": "Rafiri",
@@ -211,11 +217,12 @@
         "Nov": 0,
         "Dec": 0
       },
-      "units": 8750000,
-      "share_value": 10612696,
-      "gain": 1862696,
-      "return_pct": 21.3,
-      "pin_hash": "892522c55e3ace5cc424361713e8cd734b091d2f7307557165e08464869bc1d7"
+      "units": 10913496,
+      "share_value": 10913496,
+      "gain": 2163496,
+      "return_pct": 24.7,
+      "pin_hash": "892522c55e3ace5cc424361713e8cd734b091d2f7307557165e08464869bc1d7",
+      "rupiah_months": 56250000
     },
     {
       "name": "Indah",
@@ -237,11 +244,12 @@
         "Nov": 0,
         "Dec": 0
       },
-      "units": 7500000,
-      "share_value": 9096597,
-      "gain": 1596597,
-      "return_pct": 21.3,
-      "pin_hash": "e4445142afac44e9ff54d22eeb1012a4bd1811a73022d0a6140a4f11f7248aeb"
+      "units": 9057717,
+      "share_value": 9057717,
+      "gain": 1557717,
+      "return_pct": 20.8,
+      "pin_hash": "e4445142afac44e9ff54d22eeb1012a4bd1811a73022d0a6140a4f11f7248aeb",
+      "rupiah_months": 40500000
     },
     {
       "name": "Rachman",
@@ -263,11 +271,12 @@
         "Nov": 0,
         "Dec": 0
       },
-      "units": 7500000,
-      "share_value": 9096597,
-      "gain": 1596597,
-      "return_pct": 21.3,
-      "pin_hash": "6a1970ebefb69d60ea0d8e591128739f309dc7e3655b5abb1c48546db7ddd563"
+      "units": 9269259,
+      "share_value": 9269259,
+      "gain": 1769259,
+      "return_pct": 23.6,
+      "pin_hash": "6a1970ebefb69d60ea0d8e591128739f309dc7e3655b5abb1c48546db7ddd563",
+      "rupiah_months": 46000000
     },
     {
       "name": "Jerry",
@@ -289,11 +298,12 @@
         "Nov": 0,
         "Dec": 0
       },
-      "units": 6500000,
-      "share_value": 7883717,
-      "gain": 1383717,
-      "return_pct": 21.3,
-      "pin_hash": "5aa48656ff5ffbe01b39d85d3bca206f1a69a32765cefece6f6aa1a6d51ca7ac"
+      "units": 7701942,
+      "share_value": 7701942,
+      "gain": 1201942,
+      "return_pct": 18.5,
+      "pin_hash": "5aa48656ff5ffbe01b39d85d3bca206f1a69a32765cefece6f6aa1a6d51ca7ac",
+      "rupiah_months": 31250000
     },
     {
       "name": "Mamet",
@@ -315,11 +325,12 @@
         "Nov": 0,
         "Dec": 0
       },
-      "units": 6000000,
-      "share_value": 7277277,
-      "gain": 1277277,
-      "return_pct": 21.3,
-      "pin_hash": "d4c958932cf53bcd8934230753a5050a077b915bf415ef94c61932e9f6a60946"
+      "units": 7115402,
+      "share_value": 7115402,
+      "gain": 1115402,
+      "return_pct": 18.6,
+      "pin_hash": "d4c958932cf53bcd8934230753a5050a077b915bf415ef94c61932e9f6a60946",
+      "rupiah_months": 29000000
     },
     {
       "name": "Rangga",
@@ -341,11 +352,12 @@
         "Nov": 0,
         "Dec": 0
       },
-      "units": 6000000,
-      "share_value": 7277277,
-      "gain": 1277277,
-      "return_pct": 21.3,
-      "pin_hash": "ff2441b36b6e3de7f23fd65b1792667e398855804e4684287a91897bb3f67540"
+      "units": 6923091,
+      "share_value": 6923091,
+      "gain": 923091,
+      "return_pct": 15.4,
+      "pin_hash": "ff2441b36b6e3de7f23fd65b1792667e398855804e4684287a91897bb3f67540",
+      "rupiah_months": 24000000
     },
     {
       "name": "Riska",
@@ -367,11 +379,12 @@
         "Nov": 0,
         "Dec": 0
       },
-      "units": 4000000,
-      "share_value": 4851518,
-      "gain": 851518,
-      "return_pct": 21.3,
-      "pin_hash": "41e056a856de5a08a1d54192221ffa480d57bbec059ffff494e046e9c81a41cc"
+      "units": 4692319,
+      "share_value": 4692319,
+      "gain": 692319,
+      "return_pct": 17.3,
+      "pin_hash": "41e056a856de5a08a1d54192221ffa480d57bbec059ffff494e046e9c81a41cc",
+      "rupiah_months": 18000000
     },
     {
       "name": "Hari",
@@ -393,11 +406,12 @@
         "Nov": 0,
         "Dec": 0
       },
-      "units": 4000000,
-      "share_value": 4851518,
-      "gain": 851518,
-      "return_pct": 21.3,
-      "pin_hash": "92e5a699a645e2e449e123ef6f072ed298874609dec27b75f0f4b5335b4fe5a7"
+      "units": 4692319,
+      "share_value": 4692319,
+      "gain": 692319,
+      "return_pct": 17.3,
+      "pin_hash": "92e5a699a645e2e449e123ef6f072ed298874609dec27b75f0f4b5335b4fe5a7",
+      "rupiah_months": 18000000
     },
     {
       "name": "Adithya",
@@ -419,11 +433,12 @@
         "Nov": 0,
         "Dec": 0
       },
-      "units": 3500000,
-      "share_value": 4245078,
-      "gain": 745078,
-      "return_pct": 21.3,
-      "pin_hash": "e3bf5cad7365348ac9a570d2b6b1fea3a91a70785d6178179ad28726be2c7bf3"
+      "units": 4115394,
+      "share_value": 4115394,
+      "gain": 615394,
+      "return_pct": 17.6,
+      "pin_hash": "e3bf5cad7365348ac9a570d2b6b1fea3a91a70785d6178179ad28726be2c7bf3",
+      "rupiah_months": 16000000
     },
     {
       "name": "Cita",
@@ -445,11 +460,12 @@
         "Nov": 0,
         "Dec": 0
       },
-      "units": 3000000,
-      "share_value": 3638639,
-      "gain": 638639,
-      "return_pct": 21.3,
-      "pin_hash": "be727d96678723d81b6878cbef3ed55abd8320e02326e7bb830d43e38fbc534d"
+      "units": 3307697,
+      "share_value": 3307697,
+      "gain": 307697,
+      "return_pct": 10.3,
+      "pin_hash": "be727d96678723d81b6878cbef3ed55abd8320e02326e7bb830d43e38fbc534d",
+      "rupiah_months": 8000000
     },
     {
       "name": "Bimo",
@@ -471,11 +487,12 @@
         "Nov": 0,
         "Dec": 0
       },
-      "units": 2500000,
-      "share_value": 3032199,
-      "gain": 532199,
-      "return_pct": 21.3,
-      "pin_hash": "d8df5b89912dba907bf40b3cfbf66e9975639948472432c2aece2b297199c1ae"
+      "units": 2788466,
+      "share_value": 2788466,
+      "gain": 288466,
+      "return_pct": 11.5,
+      "pin_hash": "d8df5b89912dba907bf40b3cfbf66e9975639948472432c2aece2b297199c1ae",
+      "rupiah_months": 7500000
     }
   ],
   "holdings": {

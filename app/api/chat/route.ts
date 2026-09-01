@@ -55,7 +55,7 @@ DATA ANGGOTA (${me.name}${me.isAdmin ? ", Fund Manager" : ""}):
 - Total setoran: Rp ${me.contribution.toLocaleString("id-ID")}
 - Nilai sekarang: Rp ${me.share_value.toLocaleString("id-ID")}
 - Keuntungan: Rp ${me.gain.toLocaleString("id-ID")} (${me.return_pct}%)
-- Porsi kepemilikan: ${me.ownership_pct.toFixed(1)}% dari total dana (metode: simple proportional, jadi % return setiap anggota sama)
+- Porsi kepemilikan: ${me.ownership_pct.toFixed(1)}% dari total dana. Metode pembagian: MONEY-WEIGHTED — keuntungan dibagi berdasarkan rupiah-bulan (berapa lama tiap setoran bekerja), jadi yang setor lebih awal & rutin (tidak skip) dapat porsi keuntungan lebih besar. Principal selalu utuh. Karena itu %-return tiap anggota BERBEDA (semakin konsisten & awal, semakin tinggi).
 - Slice holding: ${me.slice.holdings.map((h) => `${h.name} Rp ${h.value.toLocaleString("id-ID")}`).join(", ")}; kas Rp ${me.slice.cash.toLocaleString("id-ID")}
 
 DATA DANA NAMBAH (per ${fund.data_as_of}):
