@@ -8,6 +8,7 @@ export type Member = {
   name: string;
   full_name: string;
   role: string;
+  email?: string;
   pin_hash: string;
   contribution: number;
   units: number;
@@ -106,6 +107,14 @@ export function verifyLogin(name: string, pin: string): Member | null {
 
 export function getMember(name: string): Member | null {
   return data.members.find((m) => m.name === name) ?? null;
+}
+
+// Map a Google account email to a member (case-insensitive). Only members whose
+// `email` is filled in the roster can sign in with Google.
+export function getMemberByEmail(email: string): Member | null {
+  const e = email.trim().toLowerCase();
+  if (!e) return null;
+  return data.members.find((m) => (m.email ?? "").trim().toLowerCase() === e) ?? null;
 }
 
 // Admin-only: everyone's numbers (no PIN hashes).

@@ -135,7 +135,8 @@
         "Nov": 1000000,
         "Dec": 2000000
       },
-      "pin_hash": "f992d9bed96f9ec5b9f0bc2d6fe505f84a9aa1308756d77855b9735e662eabee"
+      "pin_hash": "f992d9bed96f9ec5b9f0bc2d6fe505f84a9aa1308756d77855b9735e662eabee",
+      "email": ""
     },
     {
       "name": "Indah",
@@ -160,7 +161,8 @@
         "Nov": 1000000,
         "Dec": 1000000
       },
-      "pin_hash": "dcc3aeffc7ab286ffc513c98415d63aae1bcb4eee269a25abb7788b83a49af52"
+      "pin_hash": "dcc3aeffc7ab286ffc513c98415d63aae1bcb4eee269a25abb7788b83a49af52",
+      "email": ""
     },
     {
       "name": "Faristama",
@@ -185,7 +187,8 @@
         "Nov": 500000,
         "Dec": 5000000
       },
-      "pin_hash": "e890b550a5144e487ead63a4678a157c2e37743d234cbf91bed23623319d65ba"
+      "pin_hash": "e890b550a5144e487ead63a4678a157c2e37743d234cbf91bed23623319d65ba",
+      "email": ""
     },
     {
       "name": "Aiken",
@@ -210,7 +213,8 @@
         "Nov": 500000,
         "Dec": 500000
       },
-      "pin_hash": "26fc6b7f2756b0347a4cdd6973399d13e00b13b60fb0442eb67af11a54b0ce3d"
+      "pin_hash": "26fc6b7f2756b0347a4cdd6973399d13e00b13b60fb0442eb67af11a54b0ce3d",
+      "email": ""
     },
     {
       "name": "Rachman",
@@ -235,7 +239,8 @@
         "Nov": 500000,
         "Dec": 500000
       },
-      "pin_hash": "76bb4585ce466a08f8967ea4d205c2a498554d82b8cf7c37645fa28faea2a4de"
+      "pin_hash": "76bb4585ce466a08f8967ea4d205c2a498554d82b8cf7c37645fa28faea2a4de",
+      "email": ""
     },
     {
       "name": "Yakub",
@@ -260,7 +265,8 @@
         "Nov": 500000,
         "Dec": 500000
       },
-      "pin_hash": "4c417b6caae2b234ec6f6af05c7ff262870bec6a83f20acf31102d7e3801e2fc"
+      "pin_hash": "4c417b6caae2b234ec6f6af05c7ff262870bec6a83f20acf31102d7e3801e2fc",
+      "email": ""
     },
     {
       "name": "Rafiri",
@@ -285,7 +291,8 @@
         "Nov": 500000,
         "Dec": 500000
       },
-      "pin_hash": "d9daa75a17fcdfa99f161c1a86a382fc859929e2f77451e4ebebd80e369ca4ec"
+      "pin_hash": "d9daa75a17fcdfa99f161c1a86a382fc859929e2f77451e4ebebd80e369ca4ec",
+      "email": ""
     },
     {
       "name": "Hari",
@@ -310,7 +317,8 @@
         "Nov": 500000,
         "Dec": 500000
       },
-      "pin_hash": "43b2bfd44276b4d3ccb72f7ebdabe49f8233170d7650fce693f0f696d95d43f2"
+      "pin_hash": "43b2bfd44276b4d3ccb72f7ebdabe49f8233170d7650fce693f0f696d95d43f2",
+      "email": ""
     },
     {
       "name": "Jerry",
@@ -335,7 +343,8 @@
         "Nov": 500000,
         "Dec": 500000
       },
-      "pin_hash": "ec85692132f27aaeb3d855d0a68b5cd3d9d3a3b40366b8fc41e9252df000f0a4"
+      "pin_hash": "ec85692132f27aaeb3d855d0a68b5cd3d9d3a3b40366b8fc41e9252df000f0a4",
+      "email": ""
     },
     {
       "name": "Ramadhana",
@@ -360,7 +369,8 @@
         "Nov": 500000,
         "Dec": 500000
       },
-      "pin_hash": "98e40c47f4c5865cc139095cb13115d2dd6e6b0148900e8ab68741741b3e2e18"
+      "pin_hash": "98e40c47f4c5865cc139095cb13115d2dd6e6b0148900e8ab68741741b3e2e18",
+      "email": ""
     },
     {
       "name": "Adithya",
@@ -385,7 +395,8 @@
         "Nov": 1000000,
         "Dec": 384000
       },
-      "pin_hash": "3f6ca09ebeb4b3c3218e26addbb9f3d061c739901a408cdebcec41249aee4631"
+      "pin_hash": "3f6ca09ebeb4b3c3218e26addbb9f3d061c739901a408cdebcec41249aee4631",
+      "email": ""
     },
     {
       "name": "Riska",
@@ -410,7 +421,8 @@
         "Nov": 0,
         "Dec": 0
       },
-      "pin_hash": "6075f7a156d912409d183f38fa9ceaf955a01d659d34c2fcbf40e74f9966deca"
+      "pin_hash": "6075f7a156d912409d183f38fa9ceaf955a01d659d34c2fcbf40e74f9966deca",
+      "email": ""
     },
     {
       "name": "Mamet",
@@ -435,7 +447,8 @@
         "Nov": 0,
         "Dec": 0
       },
-      "pin_hash": "b0ebfafca53f5a51238136bc16d0da4db26e60921a3b42d804aad5e2ceeb88b7"
+      "pin_hash": "b0ebfafca53f5a51238136bc16d0da4db26e60921a3b42d804aad5e2ceeb88b7",
+      "email": ""
     },
     {
       "name": "Rangga",
@@ -460,7 +473,8 @@
         "Nov": 0,
         "Dec": 0
       },
-      "pin_hash": "adda6f4ca6474b7246899dcf668d340ff51ff9c3d2520da87818ea84b8046269"
+      "pin_hash": "adda6f4ca6474b7246899dcf668d340ff51ff9c3d2520da87818ea84b8046269",
+      "email": ""
     }
   ],
   "holdings": {
