@@ -72,10 +72,10 @@ export function memberView(m: Member) {
     ownership_pct: share * 100,
     slice: {
       cash: Math.round(f.cash * share),
-      holdings: data.holdings.mutual_funds
+      holdings: (data.holdings.mutual_funds as any[])
         .map((h) => ({ name: h.name, type: h.type, value: Math.round(h.nav * share) }))
         .concat(
-          data.holdings.stocks.map((s: any) => ({
+          (data.holdings.stocks as any[]).map((s) => ({
             name: s.name,
             type: "Stock",
             value: Math.round((s.value ?? 0) * share),

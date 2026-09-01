@@ -19,7 +19,8 @@ export async function POST(req: NextRequest) {
 
   // Ground the model with real, delayed prices: tickers the member asked about,
   // plus the tickers the fund has actually traded.
-  const tradeTickers = [...fund.trades.best, ...fund.trades.worst].map((t) => t.stock);
+  const trades = fund.trades as { best: any[]; worst: any[]; latest: any };
+  const tradeTickers = [...trades.best, ...trades.worst].map((t) => t.stock);
   const tickers = [...new Set([...extractTickers(lastUser), ...tradeTickers])].slice(0, 6);
   let quotes: Quote[] = [];
   try {
@@ -59,11 +60,11 @@ DATA ANGGOTA (${me.name}${me.isAdmin ? ", Fund Manager" : ""}):
 
 DATA DANA NAMBAH (per ${fund.data_as_of}):
 - NAV per unit: ${fund.current_nav} (mulai dari ${fund.starting_nav}) — return keseluruhan ${fund.overall_return_pct}%
-- Total portfolio: Rp ${fund.total_portfolio.toLocaleString("id-ID")}, ${fund.total_members} anggota
-- Holding dana: ${fund.holdings.mutual_funds.map((h) => h.name).join(", ") || "-"}
-- Realized P/L trading saham: Rp ${fund.total_realized_pl.toLocaleString("id-ID")} dari ${fund.total_trades} transaksi
-- Trade terbaik: ${fund.trades.best.slice(0, 3).map((t) => `${t.stock} +Rp ${t.pl.toLocaleString("id-ID")}`).join(", ")}
-- Trade terburuk: ${fund.trades.worst.slice(0, 3).map((t) => `${t.stock} Rp ${t.pl.toLocaleString("id-ID")}`).join(", ")}
+- Total portfolio: Rp ${fund.total_portfolio.toLocaleString("id-ID")} (kas Rp ${fund.cash.toLocaleString("id-ID")} + saham Rp ${fund.stocks_value.toLocaleString("id-ID")}), ${fund.total_members} anggota
+- Total setoran semua anggota: Rp ${fund.total_contributions.toLocaleString("id-ID")} → keuntungan Rp ${fund.total_gain.toLocaleString("id-ID")}
+- Holding saham saat ini: ${(fund.holdings.stocks as any[]).map((s) => `${s.code} ${s.pct}% (Rp ${s.value.toLocaleString("id-ID")}, ${s.gain >= 0 ? "+" : ""}Rp ${s.gain.toLocaleString("id-ID")})`).join("; ") || "-"}
+- Trade terbaik: ${trades.best.slice(0, 3).map((t) => `${t.stock} +Rp ${t.pl.toLocaleString("id-ID")}`).join(", ") || "(belum diekstrak)"}
+- Trade terburuk: ${trades.worst.slice(0, 3).map((t) => `${t.stock} Rp ${t.pl.toLocaleString("id-ID")}`).join(", ") || "(belum diekstrak)"}
 
 HARGA LIVE IDX (tertunda, dari Yahoo Finance):
 ${priceBlock}`;

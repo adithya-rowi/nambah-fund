@@ -11,15 +11,24 @@ AI assistant about it.
 It's a friends' pooled fund, not a licensed investment company. Tone is warm and
 casual; the member-facing UI is in **Bahasa Indonesia**.
 
-## The core model (understand this first)
-A unitized fund, like a mutual fund — see `data/fundData.json`:
-- The fund has a **NAV** (value per unit). Started at 1000 on 2025-01-15; history
-  is in `nav_history`.
-- Each monthly contribution buys **units** at that month's NAV. A member's holding
-  = `units × current NAV` = `share_value`. Early contributors get more units per
-  rupiah, so per-member returns differ slightly by timing.
-- **Holdings and trades are fund-level** — everyone owns them proportionally.
-  A member's holdings = the fund's holdings × `member.units / total_units`.
+## The core model (understand this first) — 2026
+The app currently runs the **2026** fund year (`data/fundData.json`). Key facts:
+- **Fresh start:** the 2025 fund was cashed out (paid to members) in early Jan 2026;
+  2026 is a brand-new fund. A member's balance depends only on their 2026 deposits.
+- **Simple proportional accounting** (`fund.model = "simple_proportional"`): each
+  member's `share_value = deposits / total_deposits × current fund value`. A
+  consequence: **every member has the same return %** (`overall_return_pct`).
+- `member.units` is set equal to `member.contribution` (deposits), so the app's
+  ownership/holdings-slice math (`units / total_units`) yields the proportional share.
+- **Holdings are fund-level** — everyone owns them proportionally. A member's slice =
+  fund holdings × `deposits / total_deposits`. In 2026 the fund holds **stocks**
+  (BULL, BUMI, BBCA, BIPI, HUMI, JGLE) + cash; the money-market fund was redeemed.
+- **Data provenance:** numbers were extracted from IPOT + BCA RDN statements in
+  `data/sources/` (gitignored, financial PII). The bank-reconciled contributions
+  ledger is in `data/sources/derived/`. Current NAV is exact (verified against IPOT);
+  the intra-year `nav_history` curve is approximate (from monthly IPOT snapshots).
+- Trades (`fund.trades`) are not yet extracted — currently empty, to be filled from
+  `data/sources/2026/Trade_Conf` + `Month_Statement`.
 
 ## Stack
 - Next.js (App Router) + React + TypeScript, Tailwind CSS, Recharts.
