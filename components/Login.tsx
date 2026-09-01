@@ -49,68 +49,111 @@ export default function Login({ onSuccess }: { onSuccess: (member: any) => void 
   }
 
   return (
-    <div className="grid min-h-screen place-items-center px-5">
-      <div className="rise w-full max-w-sm">
-        <div className="mb-8 text-center">
-          <div className="mx-auto mb-3 grid h-16 w-16 place-items-center rounded-2xl bg-brand text-3xl text-white shadow-soft">
-            🌱
+    <div className="relative flex min-h-screen flex-col items-center justify-center px-5 py-10">
+      <div className="w-full max-w-[400px]">
+        {/* Brand */}
+        <div className="rise mb-8 flex flex-col items-center text-center">
+          <div className="mb-4 grid h-16 w-16 place-items-center rounded-[1.15rem] bg-gradient-to-br from-brand to-brand-dark shadow-lift">
+            <Sprout />
           </div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-ink">Nambah</h1>
-          <p className="mt-1 text-sm text-muted">Dana patungan kita. Privat & transparan.</p>
+          <h1 className="text-[2rem] font-extrabold leading-none tracking-tight text-ink">Nambah</h1>
+          <p className="mt-2 text-sm text-muted">Dana investasi bersama — tumbuh pelan-pelan.</p>
         </div>
 
-        <div className="rounded-xl2 border border-clay/60 bg-white/80 p-6 shadow-soft backdrop-blur">
+        {/* Card */}
+        <div className="rise-2 rounded-[1.4rem] border border-clay bg-surface p-6 shadow-soft sm:p-7">
+          <div className="mb-5">
+            <h2 className="text-base font-bold text-ink">Masuk ke akunmu</h2>
+            <p className="mt-0.5 text-[13px] text-muted">Datamu privat — cuma kamu yang lihat.</p>
+          </div>
+
           <a
             href="/api/auth/google/start"
-            className="flex w-full items-center justify-center gap-3 rounded-xl border border-clay bg-white py-3 font-semibold text-ink transition hover:border-brand"
+            className="flex w-full items-center justify-center gap-3 rounded-xl border border-clay bg-surface px-4 py-3 text-sm font-medium text-ink transition hover:bg-sand active:scale-[.99]"
           >
             <GoogleIcon />
             Masuk dengan Google
           </a>
 
-          {error && <p className="mt-3 text-sm text-loss">{error}</p>}
+          {error && (
+            <p className="mt-4 rounded-lg bg-loss/8 px-3 py-2 text-sm text-loss" role="alert">
+              {error}
+            </p>
+          )}
 
-          <div className="my-5 flex items-center gap-3 text-xs text-muted">
-            <span className="h-px flex-1 bg-clay" /> atau pakai PIN <span className="h-px flex-1 bg-clay" />
+          <div className="my-5 flex items-center gap-3">
+            <span className="h-px flex-1 bg-clay" />
+            <span className="text-xs font-medium text-muted">atau pakai PIN</span>
+            <span className="h-px flex-1 bg-clay" />
           </div>
 
-          <form onSubmit={submit}>
-          <label className="mb-1 block text-xs font-semibold uppercase tracking-wide text-muted">
-            Nama panggilan
-          </label>
-          <input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="mis. Indah"
-            autoComplete="off"
-            className="mb-4 w-full rounded-xl border border-clay bg-white px-4 py-3 outline-none focus:border-brand"
-          />
+          <form onSubmit={submit} className="space-y-4">
+            <div>
+              <label htmlFor="name" className="mb-1.5 block text-xs font-semibold text-muted">
+                Nama panggilan
+              </label>
+              <input
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="mis. Indah"
+                autoComplete="off"
+                className="w-full rounded-xl border border-clay bg-surface px-4 py-3 text-ink outline-none transition placeholder:text-muted/50 focus:border-brand focus:ring-4 focus:ring-brand/10"
+              />
+            </div>
 
-          <label className="mb-1 block text-xs font-semibold uppercase tracking-wide text-muted">
-            PIN (6 digit)
-          </label>
-          <input
-            value={pin}
-            onChange={(e) => setPin(e.target.value.replace(/\D/g, "").slice(0, 6))}
-            inputMode="numeric"
-            placeholder="••••••"
-            className="w-full rounded-xl border border-clay bg-white px-4 py-3 tracking-[0.4em] outline-none focus:border-brand"
-          />
+            <div>
+              <label htmlFor="pin" className="mb-1.5 block text-xs font-semibold text-muted">
+                PIN 6 digit
+              </label>
+              <input
+                id="pin"
+                value={pin}
+                onChange={(e) => setPin(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                inputMode="numeric"
+                autoComplete="off"
+                placeholder="••••••"
+                className="w-full rounded-xl border border-clay bg-surface px-4 py-3 text-lg tracking-[0.5em] text-ink outline-none transition placeholder:tracking-[0.3em] placeholder:text-muted/40 focus:border-brand focus:ring-4 focus:ring-brand/10"
+              />
+            </div>
 
-          <button
-            type="submit"
-            disabled={loading || !name || pin.length < 4}
-            className="mt-5 w-full rounded-xl bg-brand py-3 font-semibold text-white transition hover:bg-brand-dark disabled:opacity-40"
-          >
-            {loading ? "Masuk…" : "Masuk"}
-          </button>
-          <p className="mt-4 text-center text-xs text-muted">
-            Belum punya akses? Hubungi Adith (fund manager).
-          </p>
+            <button
+              type="submit"
+              disabled={loading || !name || pin.length < 4}
+              className="w-full rounded-xl bg-brand px-4 py-3.5 font-semibold text-white shadow-soft transition hover:bg-brand-dark active:scale-[.99] disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              {loading ? "Masuk…" : "Masuk"}
+            </button>
           </form>
         </div>
+
+        <p className="rise-3 mt-6 text-center text-xs text-muted">
+          Belum punya akses? Hubungi <span className="font-medium text-ink">Adith</span> (fund manager).
+        </p>
       </div>
     </div>
+  );
+}
+
+function Sprout() {
+  return (
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M12 21V11"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M12 12C12 8.5 9 6.5 5.5 6.5C5.5 10 8 12 12 12Z"
+        fill="white"
+        fillOpacity="0.9"
+      />
+      <path
+        d="M12 11C12 7 15 4.5 18.5 4.5C18.5 8.5 15.5 11 12 11Z"
+        fill="white"
+      />
+    </svg>
   );
 }
 

@@ -4,20 +4,66 @@
 
 :root {
   color-scheme: light;
+  --bg: #faf9f7;
+  --surface: #ffffff;
+  --surface-2: #f4f3f1;
+  --border: #e7e5e3;
+  --text: #191614;
+  --text-muted: #79736c;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background: radial-gradient(1200px 600px at 50% -10%, #FCEFDD 0%, #FBF6EE 45%, #F6EEE1 100%);
   min-height: 100vh;
-  color: #3D3227;
+  color: var(--text);
+  background-color: var(--bg);
+  /* one restrained ambient tint, top-center — not a decoration free-for-all */
+  background-image: radial-gradient(
+    60rem 40rem at 50% -8rem,
+    rgba(14, 159, 110, 0.1),
+    transparent 60%
+  );
+  background-repeat: no-repeat;
 }
 
-/* thin, warm scrollbar for the chat */
-.nice-scroll::-webkit-scrollbar { width: 8px; }
-.nice-scroll::-webkit-scrollbar-thumb { background: #E9DAC3; border-radius: 999px; }
+/* refined, quiet scrollbar */
+.nice-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.nice-scroll::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
 
+/* subtle entrance — a gentle rise, no bounce/elastic (anti-slop) */
 @keyframes rise {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.rise { animation: rise 0.4s ease both; }
+.rise {
+  animation: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.rise-2 {
+  animation: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+}
+.rise-3 {
+  animation: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.16s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .rise-2,
+  .rise-3 {
+    animation: none;
+  }
+}
