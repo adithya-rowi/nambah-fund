@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: radial-gradient(1200px 600px at 50% -10%, #FCEFDD 0%, #FBF6EE 45%, #F6EEE1 100%);
+  min-height: 100vh;
+  color: #3D3227;
+}
+
+/* thin, warm scrollbar for the chat */
+.nice-scroll::-webkit-scrollbar { width: 8px; }
+.nice-scroll::-webkit-scrollbar-thumb { background: #E9DAC3; border-radius: 999px; }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.rise { animation: rise 0.4s ease both; }
