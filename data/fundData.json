@@ -23,9 +23,10 @@
     "stocks_value": 151266200,
     "mutual_funds_value": 0,
     "unrealized_pl": 12938835,
-    "total_realized_pl": null,
-    "total_trades": null,
-    "notes": "Fresh 2026 fund; 2025 was paid out. Shares = simple proportional (deposits/total x current value). Intra-year NAV approximate from monthly IPOT snapshots; current value exact."
+    "total_realized_pl": 1376418,
+    "total_trades": 61,
+    "notes": "Fresh 2026 fund; 2025 was paid out. Shares = simple proportional (deposits/total x current value). Intra-year NAV approximate from monthly IPOT snapshots; current value exact.",
+    "trades_note": "Notable trades. Jan-Jun fully reconciled to IPOT; some Jul-Aug trade confirmations are missing from source, so the trade ledger is not 100% complete. This does NOT affect member balances (deposits + current fund value are both independently verified)."
   },
   "nav_history": [
     {
@@ -549,9 +550,88 @@
     "mutual_funds": []
   },
   "trades": {
-    "best": [],
-    "worst": [],
-    "latest": null
+    "best": [
+      {
+        "date": "2026-02-24",
+        "stock": "BULL",
+        "pl": 5346640,
+        "description": "Bought avg @494, sold 100,000 @550"
+      },
+      {
+        "date": "2026-01-26",
+        "stock": "SRTG",
+        "pl": 678857,
+        "description": "Bought avg @1835, sold 5,000 @1980"
+      },
+      {
+        "date": "2026-04-22",
+        "stock": "BULL",
+        "pl": 667819,
+        "description": "Bought avg @488, sold 15,000 @535"
+      },
+      {
+        "date": "2026-04-06",
+        "stock": "BUMI",
+        "pl": 283640,
+        "description": "Bought avg @240, sold 100,000 @244"
+      },
+      {
+        "date": "2026-04-20",
+        "stock": "BUMI",
+        "pl": 270410,
+        "description": "Bought avg @245, sold 160,000 @248"
+      },
+      {
+        "date": "2026-08-07",
+        "stock": "INCO",
+        "pl": 222095,
+        "description": "Bought avg @5148, sold 1,100 @5375"
+      }
+    ],
+    "worst": [
+      {
+        "date": "2026-03-30",
+        "stock": "BUMI",
+        "pl": -1545124,
+        "description": "Bought avg @222, sold 140,000 @212"
+      },
+      {
+        "date": "2026-05-19",
+        "stock": "DEWA",
+        "pl": -1421380,
+        "description": "Bought avg @530, sold 10,000 @390"
+      },
+      {
+        "date": "2026-03-09",
+        "stock": "MEDC",
+        "pl": -1289161,
+        "description": "Bought avg @1930, sold 10,000 @1810"
+      },
+      {
+        "date": "2026-04-14",
+        "stock": "BBCA",
+        "pl": -1036686,
+        "description": "Bought avg @7728, sold 1,000 @6725"
+      },
+      {
+        "date": "2026-01-29",
+        "stock": "BUMI",
+        "pl": -913710,
+        "description": "Bought avg @340, sold 10,000 @250"
+      },
+      {
+        "date": "2026-06-04",
+        "stock": "BULL",
+        "pl": -143471,
+        "description": "Bought avg @400, sold 1,500 @306"
+      }
+    ],
+    "latest": {
+      "date": "2026-08-27",
+      "stock": "BIPI",
+      "pl": 150572,
+      "type": "gain"
+    }
   },
   "months": [
     "Jan",
