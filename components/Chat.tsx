@@ -28,19 +28,39 @@ export default function Chat({ memberName }: { memberName: string }) {
     setMessages(next);
     setInput("");
     setLoading(true);
+    const scrollDown = () =>
+      requestAnimationFrame(() => scrollRef.current?.scrollTo({ top: 1e9, behavior: "smooth" }));
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ messages: next.slice(1) }), // drop the canned greeting
       });
-      const data = await res.json();
-      setMessages((m) => [...m, { role: "assistant", content: data.reply ?? "Maaf, coba lagi ya." }]);
+      if (!res.body) throw new Error("no stream");
+      // Open an empty assistant bubble and fill it as tokens arrive.
+      setMessages((m) => [...m, { role: "assistant", content: "" }]);
+      setLoading(false);
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      for (;;) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        const chunk = decoder.decode(value, { stream: true });
+        setMessages((m) => {
+          const copy = m.slice();
+          copy[copy.length - 1] = {
+            role: "assistant",
+            content: copy[copy.length - 1].content + chunk,
+          };
+          return copy;
+        });
+        scrollDown();
+      }
     } catch {
       setMessages((m) => [...m, { role: "assistant", content: "Koneksi bermasalah. Coba lagi ya." }]);
     } finally {
       setLoading(false);
-      requestAnimationFrame(() => scrollRef.current?.scrollTo({ top: 1e9, behavior: "smooth" }));
+      scrollDown();
     }
   }
 

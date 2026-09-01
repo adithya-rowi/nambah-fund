@@ -1,8 +1,9 @@
 "use client";
+import { useState } from "react";
 import { Card, Stat, Pill } from "./ui";
 import NavChart from "./NavChart";
 import Chat from "./Chat";
-import { idr, idrCompact, pct, units as fmtUnits } from "@/lib/format";
+import { idr, idrCompact, pct } from "@/lib/format";
 import type { MemberView, PublicFund, Trade } from "./types";
 
 export default function MemberDashboard({
@@ -16,52 +17,51 @@ export default function MemberDashboard({
   onLogout: () => void;
   onAdmin?: () => void;
 }) {
+  const [showDetails, setShowDetails] = useState(false);
   const gainPositive = member.gain >= 0;
   const monthlyMax = Math.max(1, ...Object.values(member.monthly));
+  const hasTrades = (fund.trades?.best?.length ?? 0) > 0;
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-6">
+    <div className="mx-auto max-w-3xl px-4 py-6">
       <Header name={member.name} role={member.role} onLogout={onLogout} onAdmin={onAdmin} />
 
-      <div className="grid gap-5 lg:grid-cols-[1.55fr_1fr]">
-        {/* LEFT */}
-        <div className="space-y-5">
-          {/* Hero */}
-          <Card className="rise overflow-hidden">
-            <div className="bg-gradient-to-br from-brand to-brand-dark px-6 py-7 text-white">
-              <div className="text-sm/relaxed opacity-90">Nilai investasimu sekarang</div>
-              <div className="mt-1 text-4xl font-extrabold tabular-nums">{idr(member.share_value)}</div>
-              <div className="mt-3 flex flex-wrap items-center gap-2 text-sm">
-                <span className="rounded-full bg-white/20 px-3 py-1 font-semibold">
-                  {gainPositive ? "▲" : "▼"} {idr(Math.abs(member.gain))} ({pct(member.return_pct)})
-                </span>
-                <span className="opacity-90">dari setoran {idr(member.contribution)}</span>
-              </div>
-            </div>
-            <div className="grid grid-cols-3 divide-x divide-clay/60">
-              <Stat label="Unit" value={fmtUnits(member.units)} />
-              <Stat label="Kepemilikan" value={`${member.ownership_pct.toFixed(1)}%`} sub="dari dana" />
-              <Stat label="NAV / unit" value={fund.current_nav.toFixed(2)} accent="brand" sub={pct(fund.overall_return_pct)} />
-            </div>
-          </Card>
+      {/* Compact earnings hero */}
+      <Card className="rise overflow-hidden">
+        <div className="bg-gradient-to-br from-brand to-brand-dark px-6 py-6 text-white">
+          <div className="text-sm opacity-90">Nilai investasimu sekarang</div>
+          <div className="mt-1 text-4xl font-extrabold tabular-nums">{idr(member.share_value)}</div>
+          <div className="mt-2 inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-sm font-semibold">
+            {gainPositive ? "▲" : "▼"} {idr(Math.abs(member.gain))} ({pct(member.return_pct)})
+          </div>
+        </div>
+        <div className="grid grid-cols-3 divide-x divide-clay/60">
+          <Stat label="Setoranmu" value={idrCompact(member.contribution)} />
+          <Stat label="Keuntungan" value={idrCompact(member.gain)} accent={gainPositive ? "gain" : "loss"} />
+          <Stat label="Porsimu" value={`${member.ownership_pct.toFixed(1)}%`} accent="brand" sub="dari dana" />
+        </div>
+      </Card>
 
-          {/* NAV chart */}
-          <Card className="p-5">
-            <div className="mb-1 flex items-center justify-between">
-              <h2 className="font-bold text-ink">Pertumbuhan NAV Dana</h2>
-              <Pill tone="gain">{pct(fund.overall_return_pct)} sejak {fund.start_date.slice(0, 7)}</Pill>
-            </div>
-            <p className="mb-3 text-xs text-muted">
-              NAV per unit naik dari {fund.starting_nav} ke {fund.current_nav.toFixed(2)}. Nilaimu ikut naik proporsional.
-            </p>
-            <NavChart data={fund.nav_history} />
-          </Card>
+      {/* THE STAR: chat */}
+      <Card className="rise mt-5 overflow-hidden">
+        <Chat memberName={member.name} />
+      </Card>
 
+      {/* Details toggle */}
+      <button
+        onClick={() => setShowDetails((s) => !s)}
+        className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl2 border border-clay bg-white/70 py-3 text-sm font-semibold text-brand-dark hover:bg-brand/10"
+      >
+        {showDetails ? "Sembunyikan rincian ▴" : "Lihat rincian investasimu ▾"}
+      </button>
+
+      {showDetails && (
+        <div className="mt-5 space-y-5">
           {/* Where your money is */}
           <Card className="p-5">
             <h2 className="mb-1 font-bold text-ink">Uangmu ada di mana? 💰</h2>
             <p className="mb-4 text-xs text-muted">
-              Bagianmu ({member.ownership_pct.toFixed(1)}%) dari aset dana saat ini.
+              Porsimu ({member.ownership_pct.toFixed(1)}%) dari aset dana per {fund.data_as_of}.
             </p>
             <div className="space-y-2">
               {member.slice.holdings.map((h) => (
@@ -69,6 +69,18 @@ export default function MemberDashboard({
               ))}
               <Row label="Kas / tunai" tag="Cash" value={idr(member.slice.cash)} muted />
             </div>
+          </Card>
+
+          {/* NAV chart */}
+          <Card className="p-5">
+            <div className="mb-1 flex items-center justify-between">
+              <h2 className="font-bold text-ink">Pertumbuhan dana</h2>
+              <Pill tone={fund.overall_return_pct >= 0 ? "gain" : "loss"}>{pct(fund.overall_return_pct)}</Pill>
+            </div>
+            <p className="mb-3 text-xs text-muted">
+              Setiap Rp 1.000 yang disetor kini bernilai ~Rp {fund.current_nav.toFixed(0)}.
+            </p>
+            <NavChart data={fund.nav_history} />
           </Card>
 
           {/* Your contributions */}
@@ -93,23 +105,19 @@ export default function MemberDashboard({
             </div>
           </Card>
 
-          {/* Fund trading story */}
-          <div className="grid gap-5 sm:grid-cols-2">
-            <TradeCard title="Trade terbaik dana 🚀" trades={fund.trades.best} tone="gain" />
-            <TradeCard title="Trade tersulit 📉" trades={fund.trades.worst} tone="loss" />
-          </div>
+          {/* Fund trading story (only when trades are loaded) */}
+          {hasTrades && (
+            <div className="grid gap-5 sm:grid-cols-2">
+              <TradeCard title="Trade terbaik dana 🚀" trades={fund.trades.best} tone="gain" />
+              <TradeCard title="Trade tersulit 📉" trades={fund.trades.worst} tone="loss" />
+            </div>
+          )}
+
           <p className="px-1 text-center text-xs text-muted">
             Data per {fund.data_as_of} • {fund.broker} • dikelola {fund.fund_manager}
           </p>
         </div>
-
-        {/* RIGHT — AI */}
-        <div className="lg:sticky lg:top-6 lg:self-start">
-          <Card className="rise overflow-hidden">
-            <Chat memberName={member.name} />
-          </Card>
-        </div>
-      </div>
+      )}
     </div>
   );
 }
@@ -126,7 +134,7 @@ function Header({
   onAdmin?: () => void;
 }) {
   return (
-    <div className="mb-6 flex items-center justify-between">
+    <div className="mb-5 flex items-center justify-between">
       <div className="flex items-center gap-3">
         <span className="grid h-11 w-11 place-items-center rounded-xl bg-brand text-2xl text-white shadow-soft">
           🌱
@@ -142,7 +150,7 @@ function Header({
             onClick={onAdmin}
             className="rounded-full border border-brand bg-white px-4 py-2 text-sm font-semibold text-brand-dark hover:bg-brand/10"
           >
-            Panel Admin
+            Admin
           </button>
         )}
         <button

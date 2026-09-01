@@ -55,7 +55,7 @@ DATA ANGGOTA (${me.name}${me.isAdmin ? ", Fund Manager" : ""}):
 - Total setoran: Rp ${me.contribution.toLocaleString("id-ID")}
 - Nilai sekarang: Rp ${me.share_value.toLocaleString("id-ID")}
 - Keuntungan: Rp ${me.gain.toLocaleString("id-ID")} (${me.return_pct}%)
-- Unit dimiliki: ${me.units} (${me.ownership_pct.toFixed(1)}% dari dana)
+- Porsi kepemilikan: ${me.ownership_pct.toFixed(1)}% dari total dana (metode: simple proportional, jadi % return setiap anggota sama)
 - Slice holding: ${me.slice.holdings.map((h) => `${h.name} Rp ${h.value.toLocaleString("id-ID")}`).join(", ")}; kas Rp ${me.slice.cash.toLocaleString("id-ID")}
 
 DATA DANA NAMBAH (per ${fund.data_as_of}):
@@ -69,16 +69,21 @@ DATA DANA NAMBAH (per ${fund.data_as_of}):
 HARGA LIVE IDX (tertunda, dari Yahoo Finance):
 ${priceBlock}`;
 
+  const textResponse = (msg: string) =>
+    new Response(msg, {
+      headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" },
+    });
+
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) {
-    return NextResponse.json({
-      reply:
-        "Asisten AI belum aktif — OPENROUTER_API_KEY belum diset. (Untuk admin: tambahkan key-nya di environment.)",
-    });
+    return textResponse(
+      "Asisten AI belum aktif — OPENROUTER_API_KEY belum diset. (Untuk admin: tambahkan key-nya di environment.)",
+    );
   }
 
+  let upstream: Response;
   try {
-    const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+    upstream = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -89,24 +94,59 @@ ${priceBlock}`;
       body: JSON.stringify({
         model: process.env.OPENROUTER_MODEL || "deepseek/deepseek-v4-flash-0731",
         temperature: 0.5,
-        max_tokens: 800,
+        max_tokens: 1000,
+        stream: true,
+        // v4-flash is a reasoning model; disable reasoning so it answers directly
+        // (fast, and the token budget goes to the answer, not hidden thinking).
+        reasoning: { enabled: false },
         messages: [{ role: "system", content: system }, ...history],
       }),
-      signal: AbortSignal.timeout(60000),
+      signal: AbortSignal.timeout(90000),
     });
-    if (!res.ok) {
-      const detail = await res.text().catch(() => "");
-      return NextResponse.json(
-        { reply: `Maaf, asisten sedang bermasalah (${res.status}). Coba lagi sebentar.`, detail },
-        { status: 200 },
-      );
-    }
-    const json: any = await res.json();
-    const reply = json?.choices?.[0]?.message?.content ?? "Maaf, aku belum bisa menjawab itu.";
-    return NextResponse.json({ reply });
   } catch {
-    return NextResponse.json({
-      reply: "Maaf, koneksi ke asisten timeout. Coba lagi ya.",
-    });
+    return textResponse("Maaf, koneksi ke asisten timeout. Coba lagi ya.");
   }
+  if (!upstream.ok || !upstream.body) {
+    return textResponse(`Maaf, asisten sedang bermasalah (${upstream.status}). Coba lagi sebentar.`);
+  }
+
+  // Re-emit OpenRouter's SSE as a plain-text stream of content deltas.
+  const reader = upstream.body.getReader();
+  const decoder = new TextDecoder();
+  const encoder = new TextEncoder();
+  const stream = new ReadableStream<Uint8Array>({
+    async start(controller) {
+      let buffer = "";
+      try {
+        for (;;) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split("\n");
+          buffer = lines.pop() ?? "";
+          for (const line of lines) {
+            const trimmed = line.trim();
+            if (!trimmed.startsWith("data:")) continue;
+            const data = trimmed.slice(5).trim();
+            if (data === "[DONE]") continue;
+            try {
+              const json = JSON.parse(data);
+              const delta = json?.choices?.[0]?.delta?.content;
+              if (delta) controller.enqueue(encoder.encode(delta));
+            } catch {
+              /* ignore keep-alive / partial lines */
+            }
+          }
+        }
+      } catch {
+        controller.enqueue(encoder.encode("\n\n(maaf, koneksi terputus)"));
+      } finally {
+        controller.close();
+      }
+    },
+  });
+
+  return new Response(stream, {
+    headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" },
+  });
 }
