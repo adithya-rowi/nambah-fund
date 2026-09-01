@@ -4,12 +4,12 @@
 
 :root {
   color-scheme: light;
-  --bg: #faf9f7;
+  --bg: #f6f6f4;
   --surface: #ffffff;
-  --surface-2: #f4f3f1;
-  --border: #e7e5e3;
-  --text: #191614;
-  --text-muted: #79736c;
+  --surface-2: #f1f1ee;
+  --border: #e8e7e2;
+  --text: #201e1b; /* refined near-black, not pure */
+  --text-muted: #746f68;
 }
 
 html {
@@ -21,11 +21,11 @@ body {
   min-height: 100vh;
   color: var(--text);
   background-color: var(--bg);
-  /* one restrained ambient tint, top-center — not a decoration free-for-all */
+  /* whisper-soft light from the top for depth — no colored glow (anti-toy) */
   background-image: radial-gradient(
-    60rem 40rem at 50% -8rem,
-    rgba(14, 159, 110, 0.1),
-    transparent 60%
+    70rem 44rem at 50% -12rem,
+    rgba(255, 255, 255, 0.9),
+    transparent 55%
   );
   background-repeat: no-repeat;
 }

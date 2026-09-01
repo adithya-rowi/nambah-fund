@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Card, Stat, Pill } from "./ui";
+import { Card, Pill } from "./ui";
 import NavChart from "./NavChart";
 import Chat from "./Chat";
 import { idr, idrCompact, pct } from "@/lib/format";
@@ -26,19 +26,30 @@ export default function MemberDashboard({
     <div className="mx-auto max-w-3xl px-4 py-6">
       <Header name={member.name} role={member.role} onLogout={onLogout} onAdmin={onAdmin} />
 
-      {/* Compact earnings hero */}
+      {/* Earnings hero over a holiday scene */}
       <Card className="rise overflow-hidden">
-        <div className="bg-gradient-to-br from-brand to-brand-dark px-6 py-6 text-white">
-          <div className="text-sm opacity-90">Nilai investasimu sekarang</div>
-          <div className="mt-1 text-4xl font-extrabold tabular-nums">{idr(member.share_value)}</div>
-          <div className="mt-2 inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-sm font-semibold">
-            {gainPositive ? "▲" : "▼"} {idr(Math.abs(member.gain))} ({pct(member.return_pct)})
+        <div className="relative h-44 bg-brand-dark sm:h-52">
+          <img
+            src="https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?auto=format&fit=crop&w=1000&q=70"
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-black/10" />
+          <div className="absolute inset-x-0 bottom-0 p-5">
+            <div className="text-[13px] font-medium text-white/80">Nilai investasimu</div>
+            <div className="mt-0.5 text-[2rem] font-bold leading-none tabular-nums text-white">
+              {idr(member.share_value)}
+            </div>
+            <div className="mt-2.5 inline-flex items-center gap-1.5 rounded-full bg-white/15 px-2.5 py-1 text-[13px] font-semibold text-white backdrop-blur-sm ring-1 ring-white/20">
+              {gainPositive ? "↑" : "↓"} {idr(Math.abs(member.gain))} · {pct(member.return_pct)}
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-3 divide-x divide-clay/60">
-          <Stat label="Setoranmu" value={idrCompact(member.contribution)} />
-          <Stat label="Keuntungan" value={idrCompact(member.gain)} accent={gainPositive ? "gain" : "loss"} />
-          <Stat label="Porsimu" value={`${member.ownership_pct.toFixed(1)}%`} accent="brand" sub="dari dana" />
+        <div className="grid grid-cols-3">
+          <HeroStat label="Setoran" value={idrCompact(member.contribution)} />
+          <HeroStat label="Untung" value={idrCompact(member.gain)} accent />
+          <HeroStat label="Porsimu" value={`${member.ownership_pct.toFixed(1)}%`} />
         </div>
       </Card>
 
@@ -159,6 +170,21 @@ function Header({
         >
           Keluar
         </button>
+      </div>
+    </div>
+  );
+}
+
+function HeroStat({ label, value, accent }: { label: string; value: string; accent?: boolean }) {
+  return (
+    <div className="px-3 py-3.5 text-center">
+      <div className="text-[11px] font-medium uppercase tracking-wide text-muted">{label}</div>
+      <div
+        className={`mt-1 whitespace-nowrap text-[15px] font-semibold tabular-nums ${
+          accent ? "text-brand-dark" : "text-ink"
+        }`}
+      >
+        {value}
       </div>
     </div>
   );
