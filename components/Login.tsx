@@ -57,7 +57,7 @@ export default function Login({ onSuccess }: { onSuccess: (member: any) => void 
             <Sprout />
           </div>
           <h1 className="text-[2rem] font-extrabold leading-none tracking-tight text-ink">Nambah</h1>
-          <p className="mt-2 text-sm text-muted">Dana investasi bersama — tumbuh pelan-pelan.</p>
+          <p className="mt-2 text-sm text-muted">Nabung bareng buat liburan bareng — biar tambah terus 🏝️</p>
         </div>
 
         {/* Card */}

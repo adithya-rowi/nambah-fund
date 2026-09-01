@@ -4,17 +4,17 @@ import { useRef, useState } from "react";
 type Msg = { role: "user" | "assistant"; content: string };
 
 const SUGGESTIONS = [
-  "Berapa untung aku tahun ini?",
-  "Uangku sekarang diinvestasikan di mana?",
-  "Gimana pendapatmu soal BUMI sekarang?",
-  "Jelasin NAV itu apa dong",
+  "Duit liburanku udah nambah berapa? 🏝️",
+  "Aku pegang saham apa aja?",
+  "Kapan kira-kira cukup buat liburan bareng? 😄",
+  "Gimana soal BUMI sekarang?",
 ];
 
 export default function Chat({ memberName }: { memberName: string }) {
   const [messages, setMessages] = useState<Msg[]>([
     {
       role: "assistant",
-      content: `Hai ${memberName}! Aku asisten AI Nambah. Tanya apa aja soal investasimu, kinerja dana, atau pasar saham. 😊`,
+      content: `Halo ${memberName}! 👋 Aku Nambah AI. Mau ngintip duit liburan kamu udah nambah berapa? Tanya aja apa aja — santai, aku nggak gigit kok 😎`,
     },
   ]);
   const [input, setInput] = useState("");
@@ -70,7 +70,7 @@ export default function Chat({ memberName }: { memberName: string }) {
         <span className="grid h-8 w-8 place-items-center rounded-full bg-brand/15 text-brand-dark">✨</span>
         <div>
           <div className="text-sm font-bold text-ink">Tanya AI Nambah</div>
-          <div className="text-xs text-muted">Privat • cuma soal danamu</div>
+          <div className="text-xs text-muted">Santai & privat — cuma soal duitmu 😎</div>
         </div>
       </div>
 
@@ -78,13 +78,13 @@ export default function Chat({ memberName }: { memberName: string }) {
         {messages.map((m, i) => (
           <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
             <div
-              className={`max-w-[85%] whitespace-pre-wrap rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
+              className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed ${
                 m.role === "user"
-                  ? "bg-brand text-white rounded-br-sm"
+                  ? "whitespace-pre-wrap bg-brand text-white rounded-br-sm"
                   : "bg-sand text-ink rounded-bl-sm"
               }`}
             >
-              {m.content}
+              {m.role === "user" ? m.content : <MarkdownText text={m.content} />}
             </div>
           </div>
         ))}
@@ -135,6 +135,47 @@ export default function Chat({ memberName }: { memberName: string }) {
           ➤
         </button>
       </form>
+    </div>
+  );
+}
+
+function fmtInline(s: string) {
+  return s.split(/(\*\*[^*]+\*\*)/g).map((p, i) =>
+    /^\*\*[^*]+\*\*$/.test(p) ? (
+      <strong key={i} className="font-semibold">
+        {p.slice(2, -2)}
+      </strong>
+    ) : (
+      <span key={i}>{p}</span>
+    ),
+  );
+}
+
+// Minimal, safe markdown: **bold**, "- " bullets, "1." numbered, blank lines.
+function MarkdownText({ text }: { text: string }) {
+  return (
+    <div className="space-y-1">
+      {text.split("\n").map((raw, i) => {
+        const line = raw.trimEnd();
+        if (line === "") return <div key={i} className="h-1.5" />;
+        const b = line.match(/^\s*[-•]\s+(.*)$/);
+        if (b)
+          return (
+            <div key={i} className="flex gap-2">
+              <span className="text-brand">•</span>
+              <span>{fmtInline(b[1])}</span>
+            </div>
+          );
+        const n = line.match(/^\s*(\d+)\.\s+(.*)$/);
+        if (n)
+          return (
+            <div key={i} className="flex gap-2">
+              <span className="font-semibold text-brand">{n[1]}.</span>
+              <span>{fmtInline(n[2])}</span>
+            </div>
+          );
+        return <p key={i}>{fmtInline(line)}</p>;
+      })}
     </div>
   );
 }
