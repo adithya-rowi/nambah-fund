@@ -9,16 +9,16 @@
     "start_date": "2025-01-15",
     "data_as_of": "2025-12-31",
     "total_members": 14,
-    "starting_nav": 1000,
-    "current_nav": 1362.2,
-    "total_units": 92098.42,
-    "total_portfolio": 125456799,
-    "total_contributions": 97134000,
-    "total_gain": 28322799,
-    "overall_return_pct": 29.2,
-    "cash": 220420,
+    "starting_nav": 1000.0,
+    "current_nav": 1328.86,
+    "total_units": 94371.68,
+    "total_portfolio": 125406728,
+    "total_contributions": 98134000,
+    "total_gain": 27272728,
+    "overall_return_pct": 27.8,
+    "cash": 221050,
     "stocks_value": 0,
-    "mutual_funds_value": 125236379,
+    "mutual_funds_value": 125185678,
     "total_realized_pl": 26048259,
     "total_trades": 50,
     "total_fees_paid": 1375000,
@@ -29,86 +29,86 @@
     {
       "month": "2025-01",
       "month_label": "Jan",
-      "portfolio": 8250000,
-      "nav": 1000,
-      "units": 8250
+      "portfolio": 8250001,
+      "nav": 1000.0,
+      "units": 8250.0
     },
     {
       "month": "2025-02",
       "month_label": "Feb",
-      "portfolio": 21269282,
-      "nav": 1308.88,
-      "units": 16250
+      "portfolio": 16769414,
+      "nav": 1031.96,
+      "units": 16250.0
     },
     {
       "month": "2025-03",
       "month_label": "Mar",
-      "portfolio": 18805040,
-      "nav": 855.54,
-      "units": 21980.14
+      "portfolio": 24805201,
+      "nav": 1054.75,
+      "units": 23517.69
     },
     {
       "month": "2025-04",
       "month_label": "Apr",
-      "portfolio": 33534979,
-      "nav": 1031.85,
-      "units": 32499.66
+      "portfolio": 31992268,
+      "nav": 998.18,
+      "units": 32050.55
     },
     {
       "month": "2025-05",
       "month_label": "May",
-      "portfolio": 49195348,
-      "nav": 1193.37,
-      "units": 41221.68
+      "portfolio": 47652673,
+      "nav": 1160.37,
+      "units": 41066.95
     },
     {
       "month": "2025-06",
       "month_label": "Jun",
-      "portfolio": 51281496,
-      "nav": 1070.01,
-      "units": 47925.65
+      "portfolio": 49738779,
+      "nav": 1037.06,
+      "units": 47961.33
     },
     {
       "month": "2025-07",
       "month_label": "Jul",
-      "portfolio": 55942763,
-      "nav": 1009.76,
-      "units": 55402.22
+      "portfolio": 53900163,
+      "nav": 968.11,
+      "units": 55675.44
     },
     {
       "month": "2025-08",
       "month_label": "Aug",
-      "portfolio": 63014842,
-      "nav": 1002.94,
-      "units": 62829.87
+      "portfolio": 61472267,
+      "nav": 969.25,
+      "units": 63422.46
     },
     {
       "month": "2025-09",
       "month_label": "Sep",
-      "portfolio": 78019445,
-      "nav": 1086.56,
-      "units": 71803.47
+      "portfolio": 76777330,
+      "nav": 1055.97,
+      "units": 72707.99
     },
     {
       "month": "2025-10",
       "month_label": "Oct",
-      "portfolio": 80146872,
-      "nav": 1055.34,
-      "units": 75944.65
+      "portfolio": 78406974,
+      "nav": 1018.68,
+      "units": 76969.48
     },
     {
       "month": "2025-11",
       "month_label": "Nov",
-      "portfolio": 98737926,
-      "nav": 1195.72,
-      "units": 82577.33
+      "portfolio": 98740285,
+      "nav": 1177.71,
+      "units": 83841.14
     },
     {
       "month": "2025-12",
       "month_label": "Dec",
-      "portfolio": 125456799,
-      "nav": 1362.2,
-      "units": 92098.42
+      "portfolio": 125406728,
+      "nav": 1328.86,
+      "units": 94371.68
     }
   ],
   "members": [
@@ -116,11 +116,12 @@
       "name": "Paolo",
       "full_name": "PAOLO JACUB TULUSA",
       "role": "Top Contributor",
+      "pin": "1001",
       "contribution": 19000000,
-      "units": 18062.06,
-      "share_value": 24604134,
-      "gain": 5604134,
-      "return_pct": 29.5,
+      "units": 18314.70,
+      "share_value": 24337668,
+      "gain": 5337668,
+      "return_pct": 28.1,
       "monthly": {
         "Jan": 500000,
         "Feb": 2000000,
@@ -134,18 +135,18 @@
         "Oct": 0,
         "Nov": 1000000,
         "Dec": 2000000
-      },
-      "pin_hash": "2321f278bc5dee6d4e49713b250e02eeffc6a284be0cc47179cf44ac083542b6"
+      }
     },
     {
       "name": "Indah",
       "full_name": "INDAH FAJARSARI",
       "role": "Most Consistent",
+      "pin": "1002",
       "contribution": 12000000,
-      "units": 11366.15,
-      "share_value": 15482967,
-      "gain": 3482967,
-      "return_pct": 29,
+      "units": 11587.43,
+      "share_value": 15398069,
+      "gain": 3398069,
+      "return_pct": 28.3,
       "monthly": {
         "Jan": 1000000,
         "Feb": 1000000,
@@ -159,18 +160,18 @@
         "Oct": 1000000,
         "Nov": 1000000,
         "Dec": 1000000
-      },
-      "pin_hash": "1cbcd57d13449fa9d27d08aa37e551cccdc7a04c4b79475597a9e4097341018d"
+      }
     },
     {
       "name": "Faristama",
       "full_name": "FARISTAMA ARYASA",
       "role": "Member",
+      "pin": "1008",
       "contribution": 10500000,
-      "units": 9489.7,
-      "share_value": 12926864,
-      "gain": 2426864,
-      "return_pct": 23.1,
+      "units": 9598.22,
+      "share_value": 12754688,
+      "gain": 2254688,
+      "return_pct": 21.5,
       "monthly": {
         "Jan": 1000000,
         "Feb": 500000,
@@ -180,22 +181,22 @@
         "Jun": 500000,
         "Jul": 500000,
         "Aug": 0,
-        "Sep": 1000000,
-        "Oct": 0,
+        "Sep": 500000,
+        "Oct": 500000,
         "Nov": 500000,
         "Dec": 5000000
-      },
-      "pin_hash": "7ee30776dda22f89c24ef7c287c84c6ac2fe1031a3ed14a97929b06d1bfa1884"
+      }
     },
     {
       "name": "Aiken",
       "full_name": "ALBEFIANDI AIKEN S",
       "role": "Member",
+      "pin": "1003",
       "contribution": 7000000,
-      "units": 6851.93,
-      "share_value": 9333694,
-      "gain": 2333694,
-      "return_pct": 33.3,
+      "units": 6741.81,
+      "share_value": 8958920,
+      "gain": 1958920,
+      "return_pct": 28.0,
       "monthly": {
         "Jan": 500000,
         "Feb": 500000,
@@ -209,18 +210,18 @@
         "Oct": 500000,
         "Nov": 500000,
         "Dec": 500000
-      },
-      "pin_hash": "988f32cba96a33273887d21d65e004fafd1f8a72318da042d3fefc76d7cd57be"
+      }
     },
     {
       "name": "Rachman",
       "full_name": "RACHMAN BUDIMAN WI",
       "role": "Member",
+      "pin": "1004",
       "contribution": 6500000,
-      "units": 6183.07,
-      "share_value": 8422583,
-      "gain": 1922583,
-      "return_pct": 29.6,
+      "units": 6293.72,
+      "share_value": 8363471,
+      "gain": 1863471,
+      "return_pct": 28.7,
       "monthly": {
         "Jan": 1000000,
         "Feb": 500000,
@@ -234,18 +235,18 @@
         "Oct": 500000,
         "Nov": 500000,
         "Dec": 500000
-      },
-      "pin_hash": "aef7ccfc528c4e119e03492ea088d86a7852aad036c5f736aeda24dbeb797740"
+      }
     },
     {
       "name": "Yakub",
       "full_name": "YAKUB RADITYA",
       "role": "Member",
+      "pin": "1005",
       "contribution": 6500000,
-      "units": 6181.61,
-      "share_value": 8420587,
-      "gain": 1920587,
-      "return_pct": 29.5,
+      "units": 6309.58,
+      "share_value": 8384547,
+      "gain": 1884547,
+      "return_pct": 29.0,
       "monthly": {
         "Jan": 500000,
         "Feb": 500000,
@@ -259,18 +260,18 @@
         "Oct": 500000,
         "Nov": 500000,
         "Dec": 500000
-      },
-      "pin_hash": "022ccb22ec7d385d498ccfbe73adf7f1bbeecd143810643823f10578aa7da00d"
+      }
     },
     {
       "name": "Rafiri",
       "full_name": "RAFIRI DIPTA FADHA",
       "role": "Member",
+      "pin": "1006",
       "contribution": 6250000,
-      "units": 5933.07,
-      "share_value": 8082033,
-      "gain": 1832033,
-      "return_pct": 29.3,
+      "units": 6043.72,
+      "share_value": 8031256,
+      "gain": 1781256,
+      "return_pct": 28.5,
       "monthly": {
         "Jan": 750000,
         "Feb": 500000,
@@ -284,18 +285,18 @@
         "Oct": 500000,
         "Nov": 500000,
         "Dec": 500000
-      },
-      "pin_hash": "4d9a0e1f7d3ca66e3caad52358ed4dc92907a8ac34b85cc29ef9e6a3b6c9f384"
+      }
     },
     {
       "name": "Hari",
       "full_name": "HARI INDRA YASO",
       "role": "Member",
+      "pin": "1010",
       "contribution": 6000000,
-      "units": 5683.07,
-      "share_value": 7741483,
-      "gain": 1741483,
-      "return_pct": 29,
+      "units": 5793.72,
+      "share_value": 7699041,
+      "gain": 1699041,
+      "return_pct": 28.3,
       "monthly": {
         "Jan": 500000,
         "Feb": 500000,
@@ -309,18 +310,18 @@
         "Oct": 500000,
         "Nov": 500000,
         "Dec": 500000
-      },
-      "pin_hash": "c74f61927be73f9a11d29b0f148c5ae331ef851d9af07c5388b1dfe00807df6b"
+      }
     },
     {
       "name": "Jerry",
       "full_name": "JEREMIAH ELIZA RAN",
       "role": "Member",
-      "contribution": 5884000,
-      "units": 5586.06,
-      "share_value": 7609333,
-      "gain": 1725333,
-      "return_pct": 29.3,
+      "pin": "1009",
+      "contribution": 6000000,
+      "units": 5793.72,
+      "share_value": 7699041,
+      "gain": 1699041,
+      "return_pct": 28.3,
       "monthly": {
         "Jan": 500000,
         "Feb": 500000,
@@ -333,19 +334,19 @@
         "Sep": 500000,
         "Oct": 500000,
         "Nov": 500000,
-        "Dec": 384000
-      },
-      "pin_hash": "e7e117a83a0a16187037ea9d7d11879e05d6891d14e23dde17c2b718fc023e72"
+        "Dec": 500000
+      }
     },
     {
       "name": "Ramadhana",
       "full_name": "RAMADHANA NUGRAPUT",
       "role": "Member",
+      "pin": "1011",
       "contribution": 5500000,
-      "units": 5222.91,
-      "share_value": 7114643,
-      "gain": 1614643,
-      "return_pct": 29.4,
+      "units": 5320.22,
+      "share_value": 7069826,
+      "gain": 1569826,
+      "return_pct": 28.5,
       "monthly": {
         "Jan": 500000,
         "Feb": 500000,
@@ -359,18 +360,18 @@
         "Oct": 0,
         "Nov": 500000,
         "Dec": 500000
-      },
-      "pin_hash": "86a49ea9164af4a6625374a1f7aca70de5df7282925355a7b0d65e97119c46a8"
+      }
     },
     {
       "name": "Adithya",
       "full_name": "ADITHYA NUGRAPUTRA",
       "role": "Fund Manager",
-      "contribution": 5500000,
-      "units": 5255.6,
-      "share_value": 7159173,
-      "gain": 1659173,
-      "return_pct": 30.2,
+      "pin": "1007",
+      "contribution": 5884000,
+      "units": 5669.28,
+      "share_value": 7533678,
+      "gain": 1649678,
+      "return_pct": 28.0,
       "monthly": {
         "Jan": 1000000,
         "Feb": 500000,
@@ -383,19 +384,19 @@
         "Sep": 0,
         "Oct": 500000,
         "Nov": 1000000,
-        "Dec": 0
-      },
-      "pin_hash": "6191bb80ff53a54c78a496f90cd07e9b9f6ff4fc7adf2d1c0e0429e59c5cc1b4"
+        "Dec": 384000
+      }
     },
     {
       "name": "Riska",
       "full_name": "RISKA ILMII IMRAN",
       "role": "Paused",
+      "pin": "1012",
       "contribution": 4500000,
-      "units": 4330.97,
-      "share_value": 5899643,
-      "gain": 1399643,
-      "return_pct": 31.1,
+      "units": 4404.83,
+      "share_value": 5853401,
+      "gain": 1353401,
+      "return_pct": 30.1,
       "monthly": {
         "Jan": 500000,
         "Feb": 500000,
@@ -409,18 +410,18 @@
         "Oct": 0,
         "Nov": 0,
         "Dec": 0
-      },
-      "pin_hash": "a7dd481dc10b7de25d1ec323510041bca3e45b01191ff122dc969a7f4e1ac339"
+      }
     },
     {
       "name": "Mamet",
       "full_name": "MUHAMMAD RAKHMAT A",
       "role": "Special Project",
+      "pin": "1013",
       "contribution": 1000000,
-      "units": 969.13,
-      "share_value": 1320153,
-      "gain": 320153,
-      "return_pct": 32,
+      "units": 1001.82,
+      "share_value": 1331278,
+      "gain": 331278,
+      "return_pct": 33.1,
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -434,18 +435,18 @@
         "Oct": 0,
         "Nov": 0,
         "Dec": 0
-      },
-      "pin_hash": "9c76461ab66c3eac3aebe88750392eab4daced3472c3f7ca16b548b3c34d3ef0"
+      }
     },
     {
       "name": "Rangga",
       "full_name": "RANGGA ALAM",
       "role": "Occasional",
-      "contribution": 1000000,
-      "units": 983.1,
-      "share_value": 1339180,
-      "gain": 339180,
-      "return_pct": 33.9,
+      "pin": "1014",
+      "contribution": 1500000,
+      "units": 1498.91,
+      "share_value": 1991841,
+      "gain": 491841,
+      "return_pct": 32.8,
       "monthly": {
         "Jan": 0,
         "Feb": 0,
@@ -453,14 +454,13 @@
         "Apr": 0,
         "May": 500000,
         "Jun": 0,
-        "Jul": 0,
+        "Jul": 500000,
         "Aug": 0,
         "Sep": 500000,
         "Oct": 0,
         "Nov": 0,
         "Dec": 0
-      },
-      "pin_hash": "e6c2e1b70ac3d7ec2a4e63ebe6344a436266fe5be7e83f024961d3cb20ea2de3"
+      }
     }
   ],
   "holdings": {
@@ -470,7 +470,7 @@
         "name": "SYAILENDRA DANA KAS",
         "type": "Money Market",
         "invested": 125000000,
-        "nav": 125236379
+        "nav": 125185678
       }
     ]
   },
