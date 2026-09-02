@@ -75,10 +75,22 @@ export default function MemberDashboard({
               Porsimu ({member.ownership_pct.toFixed(1)}%) dari aset dana per {fund.data_as_of}.
             </p>
             <div className="space-y-2">
-              {member.slice.holdings.map((h) => (
-                <Row key={h.name} label={h.name} tag={h.type} value={idr(h.value)} />
-              ))}
-              <Row label="Kas / tunai" tag="Cash" value={idr(member.slice.cash)} muted />
+              {[...member.slice.holdings]
+                .sort((a, b) => b.value - a.value)
+                .map((h) => (
+                  <Row
+                    key={h.name}
+                    label={h.name}
+                    tag={`${((h.value / member.share_value) * 100).toFixed(1)}%`}
+                    value={idr(h.value)}
+                  />
+                ))}
+              <Row
+                label="Kas / tunai"
+                tag={`${((member.slice.cash / member.share_value) * 100).toFixed(1)}%`}
+                value={idr(member.slice.cash)}
+                muted
+              />
             </div>
           </Card>
 
